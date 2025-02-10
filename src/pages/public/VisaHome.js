@@ -2,6 +2,14 @@ import React from 'react'
 import suitcaseImage from '../../assets/suitcase.png'
 import { GoArrowUpRight } from 'react-icons/go'
 import { TfiAngleDoubleDown } from "react-icons/tfi";
+import support247 from '../../assets/suuport247.svg'
+import item1 from '../../assets/item1.svg'
+import item2 from '../../assets/item2.svg'
+import item3 from '../../assets/item3.svg'
+import person1 from '../../assets/person1.jpg'
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { BsFillStarFill } from "react-icons/bs";
+
 const VisaHome = () => {
   return (
     <div className='mt-[24px] full relative w-full'>
@@ -45,7 +53,7 @@ const VisaHome = () => {
                 </div>
             </div>
             <div className='w-[564px] h-[514px] relative'>
-                <img src={suitcaseImage} className='w-[564px] h-[514px] transform scale-x-[-1] z-40 absolute z-40' />
+                <img src={suitcaseImage} className='w-[564px] h-[514px] transform scale-x-[-1] absolute z-40' />
                 <div className='w-[433px] h-[433px] bg-[#F08921] rounded-full z-10 absolute top-0 right-0'></div>
             </div>
         </div>
@@ -73,18 +81,174 @@ const VisaHome = () => {
             <span className='uppercase text-[#272727] text-[16px] font-bold leading-[24px]'>Scroll down to see more</span>
             <TfiAngleDoubleDown />
         </div>
-        <div className='w-main mt-[20px] mx-auto'>
+        <div className='w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
             <span className='font-extrabold text-[40px] leading-[52px] underline'>WHY CHOOSE US?</span>
             <div className='w-full h-[704px] flex flex-col gap-[24px]'>
                 <div className='w-full h-[624px] flex flex-col gap-[24px]'>
                     <div className='flex gap-[136px]'>
-                        <div className='w-[437px] h-[244px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                        <div className='w-[437px] h-[244px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        <div className='w-[437px] h-[244px] flex flex-col gap-[24px]'>
+                            <div className='flex gap-[24px] items-center'>
+                                <div className='bg-[#3B7ACC] w-[64px] min-h-[64px] rounded-full flex items-center justify-center'>
+                                    <img src={support247} className='w-[32px] h-[32px] text-white'/>
+                                </div>
+                                <span className='font-bold text-[20px] leading-[26px]'>SUPPORT 24/7</span>
+                            </div>
+                            <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        </div>
+                        <div className='w-[437px] h-[244px] flex flex-col gap-[24px]'>
+                            <div className='flex gap-[24px] items-center'>
+                                <div className='bg-[#3B7ACC] w-[64px] min-h-[64px] rounded-full flex items-center justify-center'>
+                                    <img src={support247} className='w-[32px] h-[32px] text-white'/>
+                                </div>
+                                <span className='font-bold text-[20px] leading-[26px]'>FAST & SIMPLE</span>
+                            </div>
+                            <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        </div>
                     </div>
                     <div className='flex gap-[136px]'>
-                        <div className='w-[437px] h-[244px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                        <div className='w-[437px] h-[244px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        <div className='w-[437px] h-[244px] flex flex-col gap-[24px]'>
+                            <div className='flex gap-[24px] items-center'>
+                                <div className='bg-[#3B7ACC] w-[64px] min-h-[64px] rounded-full flex items-center justify-center'>
+                                    <img src={support247} className='w-[32px] h-[32px] text-white'/>
+                                </div>
+                                <span className='font-bold text-[20px] leading-[26px]'>APPROVED ON TIME</span>
+                            </div>
+                            <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        </div>
+                        <div className='w-[437px] h-[244px] flex flex-col gap-[24px]'>
+                            <div className='flex gap-[24px] items-center'>
+                                 <div className='bg-[#3B7ACC] w-[64px] min-h-[64px] rounded-full flex items-center justify-center'>
+                                    <img src={support247} className='w-[32px] h-[32px] text-white'/>
+                                </div>
+                                <span className='font-bold text-[20px] leading-[26px]'>SAFE & PRIVATE</span>
+                            </div>
+                            <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        </div>
                     </div>
+                </div>
+                <div className='w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
+                    <span className='uppercase text-[16px] font-bold leading-[24px]'>GET STARTED</span>
+                    <GoArrowUpRight />
+                </div>
+            </div>
+        </div>
+
+        <div className='w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
+            <span className='font-extrabold text-[40px] leading-[52px] underline'>HOW IT WORKS?</span>
+            <div className='w-[1172px] h-[500px] flex gap-[40px]'>
+                <div className='w-[364px] h-[500px] flex flex-col gap-[24px] items-center'>
+                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] w-[305px] h-[34px]'>FILL OUT ONLINE APPLICATION</span>
+                    <div className='w-[160px] h-[160px] rounded-full bg-[#F08921] flex items-center justify-center'>
+                        <div className='w-[88px] h-[88px] flex justify-center items-center'>
+                            <img src={item1}/>
+                        </div>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </span>
+                </div>
+                <div className='w-[364px] h-[500px] flex flex-col gap-[24px] items-center'>
+                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] w-[305px] h-[34px]'>FILL OUT ONLINE APPLICATION</span>
+                    <div className='w-[160px] h-[160px] rounded-full bg-[#F08921] flex items-center justify-center'>
+                        <div className='w-[88px] h-[88px] flex justify-center items-center'>
+                            <img src={item2}/>
+                        </div>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </span>
+                </div>
+                <div className='w-[364px] h-[500px] flex flex-col gap-[24px] items-center'>
+                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] w-[305px] h-[34px]'>FILL OUT ONLINE APPLICATION</span>
+                    <div className='w-[160px] h-[160px] rounded-full bg-[#F08921] flex items-center justify-center'>
+                       <div className='w-[88px] h-[88px] flex justify-center items-center'>
+                            <img src={item3}/>
+                        </div>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </span>
+                </div>
+            </div>
+            <div className='w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
+                <span className='uppercase text-[16px] font-bold leading-[24px]'>GET STARTED</span>
+                <GoArrowUpRight />
+            </div>
+        </div>
+
+        <div className='w-[1355px] mt-[40px] mx-auto flex flex-col gap-[40px]'>
+            <span className='font-extrabold text-[40px] leading-[52px] underline'>TESTIMONIALS</span>
+            <div className='flex justify-center items-center gap-[30px]'>
+                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC]'>
+                    <SlArrowLeft />
+                </div>
+                <div className='w-main h-[588px] flex gap-[48px]'>
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center'>
+                        <img src={person1} className='w-[325px] h-[320px]'/>
+                        <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
+                            <div className='w-[325px] h-[52px] flex flex-col'>
+                                <span className='font-bold text-lg leading-[24px]'>Lorem Ipsum</span>
+                                <span>Job Title</span>
+                            </div>
+                            <div className='w-[128px] h-[22px] flex gap-[2px]'>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                            </div>
+                            <span className='font-normal italic text-[12px] leading-[16px]'>
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
+                            </span>
+                            
+                        </div>
+                    </div>
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center'>
+                        <img src={person1} className='w-[325px] h-[320px]'/>
+                        <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
+                            <div className='w-[325px] h-[52px] flex flex-col'>
+                                <span className='font-bold text-lg leading-[24px]'>Lorem Ipsum</span>
+                                <span>Job Title</span>
+                            </div>
+                            <div className='w-[128px] h-[22px] flex gap-[2px]'>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                            </div>
+                            <span className='font-normal italic text-[12px] leading-[16px]'>
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
+                            </span>
+                        </div>
+                    </div>
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center'>
+                        <img src={person1} className='w-[325px] h-[320px]'/>
+                        <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
+                            <div className='w-[325px] h-[52px]'>
+                                <span className='font-bold text-lg leading-[24px]'>Lorem Ipsum</span>
+                                <span>Job Title</span>
+                            </div>
+                            <div className='w-[128px] h-[22px] flex gap-[2px]'>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969'/>
+                            </div>
+                            <span className='font-normal italic text-[12px] leading-[16px]'>
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC]'>
+                     <SlArrowRight/>
                 </div>
             </div>
         </div>
