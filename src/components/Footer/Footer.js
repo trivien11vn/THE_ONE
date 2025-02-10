@@ -1,0 +1,69 @@
+import React, { memo } from 'react'
+import logo from '../../assets/logo.png'
+import { GoArrowUpRight } from "react-icons/go";
+import linkedIn from '../../assets/likedIn.svg'
+import facebook from '../../assets/facebook.svg'
+import twitter from '../../assets/twitter.svg'
+// import icons from '../../ultils/icon'
+const Footer = () => {
+  // const {MdEmail} = icons
+  return (
+    <div className='w-full h-[440px] bg-[#3B7ACC] flex justify-center items-center text-white'>
+      <div className='w-main h-[342px] flex flex-col gap-[40px]'>
+        <div className='h-[282px] flex gap-[22px] items-start'>
+          <img src={logo} className='w-[60px] h-[60px]'/>
+          <div className='flex justify-start gap-[22px]'>
+            <div className='flex flex-col gap-[16px] w-[136px] h-[218px]'>
+              <span className='font-bold text-[20px] leading-[34px]'>Global eVISA</span>
+              <div className='flex flex-col gap-[8px]'>
+                <span className='leading-[20px] font-[400px] text-[14px]'>About Us</span>
+                <span className='leading-[20px] font-[400px] text-[14px]'>Careers</span>
+                <span className='leading-[20px] font-[400px] text-[14px]'>Policies</span>
+                <span className='leading-[20px] font-[400px] text-[14px]'>Term & Conditions</span>
+              </div>
+            </div>
+            <div className='flex flex-col gap-[16px] w-[152px] h-[168px]'>
+              <span className='font-bold text-[20px] leading-[34px]'>Need to Know</span>
+              <div className='flex flex-col gap-[8px]'>
+                <span className='leading-[20px] font-[400px] text-[14px]'>How it works</span>
+                <span className='leading-[20px] font-[400px] text-[14px]'>FAQs</span>
+                <span className='leading-[20px] font-[400px] text-[14px]'>Blogs</span>
+              </div>
+            </div>
+            <div className='flex flex-col gap-[16px] w-[219px] h-[280px]'>
+              <span className='font-bold text-[20px] leading-[34px]'>Contact Us</span>
+              <div className='flex flex-col gap-[8px]'>
+                <span className='leading-[20px] font-[400px] text-[14px]'>No. 40 - 42, Thien Phuoc St Ward 9, Tan Binh Dist, HCMC, Vietnam</span>
+                <span className='leading-[20px] font-[400px] text-[14px]'>Hotline: 
+                  +84.987.309.313
+                  +84.28.6685.1315
+                  +84.28.6685.1317
+                </span>
+                <span className='leading-[20px] font-[400px] text-[14px]'>Email: loremipsum@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          <div className='flex flex-col gap-[40px] w-[482px] h-[280px]'>
+            <span className='text-[40px] font-extrabold'>SUBSCRIBE TO GET OUR NEWSLETTER</span>
+            <div className='flex flex-col gap-[40px] items-center'>
+              <div className='w-[481px] gap-[12px] h-[56px] flex'>
+                <input className='p-2 rounded-[8px] w-[300px]' placeholder='Enter your email address'/>
+                <div className='bg-[#F08921] w-[169px] h-[56px] rounded-[8px] border border-white p-4 flex justify-between items-center text-[14px] font-extrabold leading-[24px]'>SUBSCRIBE <GoArrowUpRight /></div>
+              </div>
+              <div className='w-[200px] h-[40px] flex gap-[40px]'>
+                <img src={linkedIn} className='w-[40px] h-[40px]'/>
+                <img src={facebook} className='w-[40px] h-[40px]'/>
+                <img src={twitter} className='w-[40px] h-[40px]'/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='text-[14px] font-[400px] leading-[22px]'>
+          @Global eVISA 2023 All rights reserved
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default memo(Footer)
