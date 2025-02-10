@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import path from './utils/path';
 import Public from './pages/public/Public';
-import { VisaHome } from './pages/public';
+import { VisaApply, VisaHome } from './pages/public';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path={path.PUBLIC} element={<Public />}>
           <Route path={path.HOME} element={<VisaHome />}/>
+          <Route path={path.VISA_APPLY} element={<VisaApply />} />
         </Route>
       </Routes>
     </div>

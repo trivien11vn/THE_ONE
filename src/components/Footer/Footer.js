@@ -8,7 +8,7 @@ import twitter from '../../assets/twitter.svg'
 const Footer = () => {
   // const {MdEmail} = icons
   return (
-    <div className='w-full h-[440px] bg-[#3B7ACC] flex justify-center items-center text-white'>
+    <div className='w-full min-h-[440px] bg-[#3B7ACC] flex justify-center items-center text-white'>
       <div className='w-main h-[342px] flex flex-col gap-[40px]'>
         <div className='h-[282px] flex gap-[22px] items-start'>
           <img src={logo} className='w-[60px] h-[60px]'/>

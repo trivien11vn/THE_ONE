@@ -180,10 +180,10 @@ const VisaHome = () => {
             </div>
         </div>
 
-        <div className='w-[1355px] mt-[40px] mx-auto flex flex-col gap-[40px]'>
+        <div className='w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
             <span className='font-extrabold text-[40px] leading-[52px] underline'>TESTIMONIALS</span>
-            <div className='flex justify-center items-center gap-[30px]'>
-                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC]'>
+            <div className='flex justify-center items-center relative'>
+                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] absolute left-[-90px] top-1/2'>
                     <SlArrowLeft />
                 </div>
                 <div className='w-main h-[588px] flex gap-[48px]'>
@@ -247,8 +247,8 @@ const VisaHome = () => {
                     </div>
                     
                 </div>
-                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC]'>
-                     <SlArrowRight/>
+                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] absolute right-[-90px] top-1/2'>
+                    <SlArrowRight/>
                 </div>
             </div>
         </div>
