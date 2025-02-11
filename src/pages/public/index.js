@@ -1,3 +1,8 @@
 export {default as VisaHome} from './VisaHome'
 export {default as Public} from './Public'
 export {default as VisaApply} from './VisaApply'
+export {default as VisaCountry} from './VisaCountry'
+export {default as FillInfoWeb} from './FillInfoWeb'
+export {default as ChoosingPaymentMethod} from './ChoosingPaymentMethod'
+export {default as ConfirmSuccess} from './ConfirmSuccess'
+export {default as ConfirmSuccessTransfer} from './ConfirmSuccessTransfer'
