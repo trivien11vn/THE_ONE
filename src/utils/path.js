@@ -8,7 +8,9 @@ const path = {
     CHOOSING_PAYMENT_METHOD: 'choosing_payment_method',
     CONFIRM_SUCCESS: 'confirm_success',
     CONFIRM_SUCCESS_TRANSFER: 'confirm_success_transfer',
-    CONFIRM_FAIL: 'confirm_fail'
+    CONFIRM_FAIL: 'confirm_fail',
+    CONTACT_US: 'contact_us',
+    CONTENT_CHECK: 'content_check',
 }
 
 export default path
