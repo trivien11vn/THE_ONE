@@ -20,7 +20,11 @@ const path = {
     FAQ: 'faq',
     NEWS: 'news',
     BLOGS: 'blogs',
-    BLOG_DETAIL: 'blog_detail'
+    BLOG_DETAIL: 'blog_detail',
+    MISSING_INFO: 'missing_info',
+    COUNTRY_DETAIL: 'country_detail',
+    BOOKING_FLIGHT: 'booking_flight',
+    SEARCH_FLIGHT: 'search_flight',
 }
 
 export default path

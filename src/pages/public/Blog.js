@@ -171,7 +171,7 @@ const Blog = () => {
                         <div className='flex flex-col gap-[24px]'>
                             <div className='flex flex-col gap-[16px]'>
                                 <img src={image11} className='w-full h-[180px] object-cover'/>
-                                <span className='font-bold text-[16px] leading-6'>Company information</span>
+                                <span className='font-bold text-[16px] leading-6 uppercase'>Company formation</span>
                                 <span className='font-extrabold text-[24px] leading-[32px]'>LOREM IPSUM</span>
                                 <span className='font-normal text-[16px] leading-[24px] font-montserrat'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </span>
                             </div>
@@ -179,7 +179,7 @@ const Blog = () => {
                         </div>
                         <div className='flex flex-col gap-[24px]'>
                             <div className='flex flex-col gap-[16px]'>
-                                <span className='font-bold text-[16px] leading-6'>Company information</span>
+                                <span className='font-bold text-[16px] leading-6 uppercase'>Company formation</span>
                                 <span className='font-extrabold text-[24px] leading-[32px]'>LOREM IPSUM</span>
                             </div>
                             <div className='w-full h-[1px] bg-[#A7A7A7]'></div>

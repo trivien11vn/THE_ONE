@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import path from './utils/path';
 import Public from './pages/public/Public';
-import { AboutUs, Blog, BlogDetail, Career, ChoosingPaymentMethod, ConfirmFail, ConfirmSuccess, ConfirmSuccessTransfer, ContactUs, ContentCheck, ContentCheckLegal, DetailCareer, FAQ, FillInfoWeb, Policies, TermAndCondition, VisaApply, VisaCountry, VisaHome } from './pages/public';
+import { AboutUs, Blog, BlogDetail, BookFlight, Career, ChoosingPaymentMethod, ConfirmFail, ConfirmSuccess, ConfirmSuccessTransfer, ContactUs, ContentCheck, ContentCheckLegal, CountryDetail, DetailCareer, FAQ, FillInfoWeb, MissingInfo, Policies, TermAndCondition, VisaApply, VisaCountry, VisaHome } from './pages/public';
 import News from 'pages/public/News';
+import SearchFlight from 'pages/public/SearchFlight';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
           <Route path={path.NEWS} element={<News />}/>
           <Route path={path.BLOGS} element={<Blog />}/>
           <Route path={path.BLOG_DETAIL} element={<BlogDetail />}/>
+          <Route path={path.MISSING_INFO} element={<MissingInfo />} />
+          <Route path={path.COUNTRY_DETAIL} element={<CountryDetail />} />
+          <Route path={path.BOOKING_FLIGHT} element={<BookFlight />} />
+          <Route path={path.SEARCH_FLIGHT} element={<SearchFlight />} />
         </Route>
       </Routes>
     </div>
