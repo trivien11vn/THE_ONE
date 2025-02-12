@@ -1,0 +1,16 @@
+import React from 'react'
+
+const PictureImage = ({title, subtile, detail, image}) => {
+  return (
+    <div className='p-[16px] rounded-lg border border-[#D3D3D3] flex flex-col gap-4'>
+        <img src={image} className='w-full h-[320px] object-cover'/>
+        <div className='flex flex-col'>
+            <span className='font-bold text-[18px] leading-[24px]'>{title}</span>
+            <span className='font-medium text-[14px] leading-[24px]'>{subtile}</span>
+        </div>
+        <span className='font-normal italic text-[12px] leading-[16px]'>{detail}</span>
+    </div>
+  )
+}
+
+export default PictureImage

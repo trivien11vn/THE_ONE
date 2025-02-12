@@ -14,7 +14,13 @@ const path = {
     CONTENT_CHECK_ILLEGAL: 'content_check_legal',
     ABOUT_US: 'about_us',
     CAREER: 'career',
-    DETAIL_CAREER: 'detail_career'
+    DETAIL_CAREER: 'detail_career',
+    POLICIES: 'policies',
+    TERM_AND_CONDITION: 'term_and_condition',
+    FAQ: 'faq',
+    NEWS: 'news',
+    BLOGS: 'blogs',
+    BLOG_DETAIL: 'blog_detail'
 }
 
 export default path

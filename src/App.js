@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import path from './utils/path';
 import Public from './pages/public/Public';
-import { AboutUs, Career, ChoosingPaymentMethod, ConfirmFail, ConfirmSuccess, ConfirmSuccessTransfer, ContactUs, ContentCheck, ContentCheckLegal, DetailCareer, FillInfoWeb, VisaApply, VisaCountry, VisaHome } from './pages/public';
+import { AboutUs, Blog, BlogDetail, Career, ChoosingPaymentMethod, ConfirmFail, ConfirmSuccess, ConfirmSuccessTransfer, ContactUs, ContentCheck, ContentCheckLegal, DetailCareer, FAQ, FillInfoWeb, Policies, TermAndCondition, VisaApply, VisaCountry, VisaHome } from './pages/public';
+import News from 'pages/public/News';
 
 function App() {
   return (
@@ -22,6 +23,12 @@ function App() {
           <Route path={path.ABOUT_US} element={<AboutUs />}/>
           <Route path={path.CAREER} element={<Career />}/>
           <Route path={path.DETAIL_CAREER} element={<DetailCareer />}/>
+          <Route path={path.POLICIES} element={<Policies />}/>
+          <Route path={path.TERM_AND_CONDITION} element={<TermAndCondition />}/>
+          <Route path={path.FAQ} element={<FAQ />}/>
+          <Route path={path.NEWS} element={<News />}/>
+          <Route path={path.BLOGS} element={<Blog />}/>
+          <Route path={path.BLOG_DETAIL} element={<BlogDetail />}/>
         </Route>
       </Routes>
     </div>
