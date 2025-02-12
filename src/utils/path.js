@@ -11,6 +11,10 @@ const path = {
     CONFIRM_FAIL: 'confirm_fail',
     CONTACT_US: 'contact_us',
     CONTENT_CHECK: 'content_check',
+    CONTENT_CHECK_ILLEGAL: 'content_check_legal',
+    ABOUT_US: 'about_us',
+    CAREER: 'career',
+    DETAIL_CAREER: 'detail_career'
 }
 
 export default path

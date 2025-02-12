@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import path from './utils/path';
 import Public from './pages/public/Public';
-import { ChoosingPaymentMethod, ConfirmFail, ConfirmSuccess, ConfirmSuccessTransfer, ContactUs, ContentCheck, FillInfoWeb, VisaApply, VisaCountry, VisaHome } from './pages/public';
+import { AboutUs, Career, ChoosingPaymentMethod, ConfirmFail, ConfirmSuccess, ConfirmSuccessTransfer, ContactUs, ContentCheck, ContentCheckLegal, DetailCareer, FillInfoWeb, VisaApply, VisaCountry, VisaHome } from './pages/public';
 
 function App() {
   return (
@@ -18,6 +18,10 @@ function App() {
           <Route path={path.CONFIRM_FAIL} element={<ConfirmFail />} />
           <Route path={path.CONTACT_US} element={<ContactUs />} />
           <Route path={path.CONTENT_CHECK} element={<ContentCheck />} />
+          <Route path={path.CONTENT_CHECK_ILLEGAL} element={<ContentCheckLegal />}/>
+          <Route path={path.ABOUT_US} element={<AboutUs />}/>
+          <Route path={path.CAREER} element={<Career />}/>
+          <Route path={path.DETAIL_CAREER} element={<DetailCareer />}/>
         </Route>
       </Routes>
     </div>
