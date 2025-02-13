@@ -25,6 +25,16 @@ const path = {
     COUNTRY_DETAIL: 'country_detail',
     BOOKING_FLIGHT: 'booking_flight',
     SEARCH_FLIGHT: 'search_flight',
+    FILL_INFO_DETAIL: 'fill_info_detail',
+
+
+    //USER LAYOUT
+    USER: 'user',
+    MY_ACCOUNT: 'account',
+    BOOKING: 'booking',
+    BOOKING_DETAIL: 'booking_detail',
+    INVOICE: 'invoice',
+    PROFILE: 'profile',
 }
 
 export default path

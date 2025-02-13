@@ -1,9 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 import path from './utils/path';
 import Public from './pages/public/Public';
-import { AboutUs, Blog, BlogDetail, BookFlight, Career, ChoosingPaymentMethod, ConfirmFail, ConfirmSuccess, ConfirmSuccessTransfer, ContactUs, ContentCheck, ContentCheckLegal, CountryDetail, DetailCareer, FAQ, FillInfoWeb, MissingInfo, Policies, TermAndCondition, VisaApply, VisaCountry, VisaHome } from './pages/public';
+import { AboutUs, Blog, BlogDetail, BookFlight, Career, ChoosingPaymentMethod, ConfirmFail, ConfirmSuccess, ConfirmSuccessTransfer, ContactUs, ContentCheck, ContentCheckLegal, CountryDetail, DetailCareer, FAQ, FillInfoDetail, FillInfoWeb, MissingInfo, Policies, TermAndCondition, VisaApply, VisaCountry, VisaHome } from './pages/public';
 import News from 'pages/public/News';
 import SearchFlight from 'pages/public/SearchFlight';
+import MyAccount from 'pages/public/MyAccount';
+import UserLayout from 'pages/public/UserLayout';
+import MyBooking from 'pages/public/MyBooking';
+import MyInvoice from 'pages/public/MyInvoice';
+import MyProfile from 'pages/public/MyProfile';
+import MyBookingDetail from 'pages/public/MyBookingDetail';
 
 function App() {
   return (
@@ -34,6 +40,15 @@ function App() {
           <Route path={path.COUNTRY_DETAIL} element={<CountryDetail />} />
           <Route path={path.BOOKING_FLIGHT} element={<BookFlight />} />
           <Route path={path.SEARCH_FLIGHT} element={<SearchFlight />} />
+          <Route path={path.FILL_INFO_DETAIL} element={<FillInfoDetail />} />
+
+          <Route path={path.USER} element={<UserLayout />}>
+            <Route path='' element={<MyAccount />} /> 
+            <Route path={path.BOOKING} element={<MyBooking />} />
+            <Route path={path.INVOICE} element={<MyInvoice />} />
+            <Route path={path.PROFILE} element={<MyProfile />}/>
+            <Route path={path.BOOKING_DETAIL} element={<MyBookingDetail />}/>
+          </Route>
         </Route>
       </Routes>
     </div>
