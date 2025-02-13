@@ -32,7 +32,7 @@ const VisaHome = () => {
         <div className='w-main mx-auto flex justify-between'>
             <div className='flex flex-col gap-[24px]'>
                 <div className='flex flex-col justify-between w-[623px] h-[240px]'>
-                    <span className='text-[56px] font-extrabold leading-[64px]'>FIND YOUR DESTINATION!!!!</span>
+                    <span className='text-[56px] font-extrabold leading-[64px]'>FIND YOUR DESTINATION!!!!!!</span>
                     <span className='text-[32px] font-[400px] leading-[36px]'>Let us apply the paperworks or eVISA for your trip.</span>
                 </div>
                 <div className='w-[645px] h-[180px] flex flex-col gap-[24px] mt-[20px]'>
