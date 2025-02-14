@@ -8,8 +8,11 @@ import image2 from '../../assets/japan_2.jpg'
 import image3 from '../../assets/japan_3.jpg'
 import flag from '../../assets/japan_flag.png'
 import clsx from 'clsx'
+import { useNavigate } from 'react-router-dom'
+import path from 'utils/path'
 
 const CountryDetail = () => {
+    const navigate = useNavigate()
     const [imageIndex, setImageIndex] = useState(1)
     const handleNextImage = () => {
         if (imageIndex === 3) {
@@ -31,7 +34,7 @@ const CountryDetail = () => {
             <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
             <div className='w-main mx-auto h-[40px] flex justify-between items-start'>
                 <div className='w-[592px] h-[40px] flex items-center gap-[16px]'>
-                    <div className='w-[88px] h-[40px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] flex items-center justify-center'>Home</div>
+                    <div onClick={()=>{navigate(`/`)}} className='w-[88px] h-[40px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] flex items-center justify-center hover:bg-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out cursor-pointer'>Home</div>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.83331 12.3513V7.64882C5.83331 6.10524 7.50774 5.1435 8.84106 5.92127L12.8718 8.27252C14.1948 9.04428 14.1948 10.9559 12.8718 11.7276L8.84106 14.0789C7.50774 14.8567 5.83331 13.8949 5.83331 12.3513Z" stroke="#3B7ACC" stroke-linejoin="round" />
                     </svg>
@@ -42,7 +45,7 @@ const CountryDetail = () => {
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.83331 12.3513V7.64882C5.83331 6.10524 7.50774 5.1435 8.84106 5.92127L12.8718 8.27252C14.1948 9.04428 14.1948 10.9559 12.8718 11.7276L8.84106 14.0789C7.50774 14.8567 5.83331 13.8949 5.83331 12.3513Z" stroke="#3B7ACC" stroke-linejoin="round" />
                     </svg>
-                    <div className='w-[300px] h-[40px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] flex items-center justify-center'>
+                    <div onClick={()=>{navigate(`/${path.VISA_APPLY}`)}} className='w-[300px] h-[40px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] flex items-center justify-center hover:bg-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out cursor-pointer'>
                         <span className='text-[16px] leading-[28px]'>Get Your Global Evisa Now !</span>
                     </div>
                 </div>

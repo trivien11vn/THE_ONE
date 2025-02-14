@@ -49,7 +49,10 @@ const VisaHome = () => {
                             <div className='w-[300px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                         </div>
                     </div>
-                    <div onClick={() => {navigate(`/${path.VISA_APPLY}`)}} className='cursor-pointer w-[645px] h-[48px] rounded-lg bg-[#3B7ACC] flex justify-center items-center text-white font-[700px] leading-[24px] text-[16px] gap-1'>
+                    <div 
+                    onClick={() => { navigate(`/${path.VISA_APPLY}`); }} 
+                    className='cursor-pointer w-[645px] h-[48px] rounded-lg bg-[#3B7ACC] flex justify-center items-center text-white font-[700] leading-[24px] text-[16px] gap-1 
+                        hover:bg-white hover:text-[#3B7ACC] hover:border-[#3B7ACC] border border-transparent transition-all duration-300 ease-in-out'>
                         GET STARTED
                         <GoArrowUpRight />
                     </div>
@@ -80,8 +83,9 @@ const VisaHome = () => {
                 </div>
             </div>
         </div>
-        <div className='w-[314px] h-[64px] rounded-[12px] mx-auto border border-[#7F7F7F] flex flex-col items-center justify-center mt-[20px]'>
-            <span className='uppercase text-[#272727] text-[16px] font-bold leading-[24px]'>Scroll down to see more</span>
+        <div className='cursor-pointer w-[314px] h-[64px] rounded-[12px] mx-auto border border-[#7F7F7F] flex flex-col items-center justify-center mt-[20px] 
+        hover:bg-[#FFA500] hover:border-[#FFA500] hover:text-white transition-all duration-300 ease-in-out text-[#272727]'>
+            <span className='uppercase text-[16px] font-bold leading-[24px]'>Scroll down to see more</span>
             <TfiAngleDoubleDown />
         </div>
         <div className='w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
@@ -133,7 +137,9 @@ const VisaHome = () => {
                         </div>
                     </div>
                 </div>
-                <div onClick={()=>{navigate(`/${path.VISA_APPLY}`)}} className='cursor-pointer w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
+                <div 
+                    onClick={() => { navigate(`/${path.VISA_APPLY}`); }} 
+                    className='cursor-pointer w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px] hover:bg-white hover:text-[#3B7ACC] hover:border-[#3B7ACC] border border-transparent transition-all duration-300 ease-in-out'>
                     <span className='uppercase text-[16px] font-bold leading-[24px]'>GET STARTED</span>
                     <GoArrowUpRight />
                 </div>
@@ -177,20 +183,22 @@ const VisaHome = () => {
                     </span>
                 </div>
             </div>
-            <div onClick={()=>{navigate(`/${path.VISA_APPLY}`)}} className='cursor-pointer w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
-                <span className='uppercase text-[16px] font-bold leading-[24px]'>GET STARTED</span>
-                <GoArrowUpRight />
+            <div 
+            onClick={() => { navigate(`/${path.VISA_APPLY}`); }} 
+            className='cursor-pointer w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px] hover:bg-white hover:text-[#3B7ACC] hover:border-[#3B7ACC] border border-transparent transition-all duration-300 ease-in-out'>
+            <span className='uppercase text-[16px] font-bold leading-[24px]'>GET STARTED</span>
+            <GoArrowUpRight />
             </div>
         </div>
 
         <div className='w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
             <span className='font-extrabold text-[40px] leading-[52px] underline'>TESTIMONIALS</span>
             <div className='flex justify-center items-center relative'>
-                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] absolute left-[-90px] top-1/2'>
+                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] border border-[#3B7ACC] absolute left-[-90px] top-1/2 hover:bg-white hover:text-[#3B7ACC] cursor-pointer transition-all duration-300 ease-in-out'>
                     <SlArrowLeft />
                 </div>
                 <div className='w-main h-[588px] flex gap-[48px]'>
-                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center'>
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-transform transform hover:scale-110 duration-300 ease-in-out cursor-pointer'>
                         <img src={person1} className='w-[325px] h-[320px]'/>
                         <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
                             <div className='w-[325px] h-[52px] flex flex-col'>
@@ -210,7 +218,7 @@ const VisaHome = () => {
                             
                         </div>
                     </div>
-                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center'>
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-transform transform hover:scale-110 duration-300 ease-in-out cursor-pointer'>
                         <img src={person1} className='w-[325px] h-[320px]'/>
                         <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
                             <div className='w-[325px] h-[52px] flex flex-col'>
@@ -229,7 +237,7 @@ const VisaHome = () => {
                             </span>
                         </div>
                     </div>
-                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center'>
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-transform transform hover:scale-110 duration-300 ease-in-out cursor-pointer'>
                         <img src={person1} className='w-[325px] h-[320px]'/>
                         <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
                             <div className='w-[325px] h-[52px] flex flex-col'>
@@ -248,9 +256,8 @@ const VisaHome = () => {
                             </span>
                         </div>
                     </div>
-                    
                 </div>
-                <div onClick={()=>{navigate(`/${path.VISA_APPLY}`)}} className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] absolute right-[-90px] top-1/2'>
+                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] border border-[#3B7ACC] absolute right-[-90px] top-1/2 hover:bg-white hover:text-[#3B7ACC] cursor-pointer transition-all duration-300 ease-in-out'>
                     <SlArrowRight/>
                 </div>
             </div>
