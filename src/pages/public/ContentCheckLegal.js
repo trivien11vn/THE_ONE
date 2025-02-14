@@ -125,17 +125,17 @@ const ContentCheckLegal = () => {
             </div>
           </div>
           <div className='w-full h-[68px] flex gap-[56px]'>
-            <div onClick={() => setStatus('process')} className={clsx('flex-1 cursor-pointer flex items-center justify-center border-2 border-[#3B7ACC] rounded-2xl', status === 'process' && 'bg-[#3B7ACC]')}>
-                <span className={clsx('font-bold text-[20px] leading-[72px]', status !== 'process' ? 'text-[#2F62A3]' : 'text-white')}>ABOUT THE PROCESS</span>
+            <div onClick={() => setStatus('process')} className={clsx('flex-1 cursor-pointer flex items-center justify-center border-2 border-[#3B7ACC] rounded-2xl transition-all duration-300 ease-in-out', status === 'process' ? 'bg-[#3B7ACC]' : ' hover:bg-[#3B7ACC]')}>
+                <span className={clsx('font-bold text-[20px] leading-[72px]', status !== 'process' ? 'text-[#2F62A3] hover:text-white' : 'text-white')}>ABOUT THE PROCESS</span>
             </div>
-            <div onClick={() => setStatus('work')} className={clsx('flex-1 cursor-pointer flex items-center justify-center border-2 border-[#3B7ACC] rounded-2xl', status === 'work' && 'bg-[#3B7ACC]')}>
-                <span className={clsx('font-bold text-[20px] leading-[72px]', status !== 'work' ? 'text-[#2F62A3]' : 'text-white')}>HOW IT WORKS?</span>
+            <div onClick={() => setStatus('work')} className={clsx('flex-1 cursor-pointer flex items-center justify-center border-2 border-[#3B7ACC] rounded-2xl transition-all duration-300 ease-in-out', status === 'work' ? 'bg-[#3B7ACC]' : 'bg-white hover:bg-[#3B7ACC]')}>
+                <span className={clsx('font-bold text-[20px] leading-[72px]', status !== 'work' ? 'text-[#2F62A3] hover:text-white' : 'text-white')}>HOW IT WORKS?</span>
             </div>
-            <div onClick={() => setStatus('apply')} className={clsx('flex-1 cursor-pointer flex items-center justify-center border-2 border-[#3B7ACC] rounded-2xl', status === 'apply' && 'bg-[#3B7ACC]')}>
-                <span className={clsx('font-bold text-[20px] leading-[72px]', status !== 'apply' ? 'text-[#2F62A3]' : 'text-white')}>HOW TO APPLY</span>
+            <div onClick={() => setStatus('apply')} className={clsx('flex-1 cursor-pointer flex items-center justify-center border-2 border-[#3B7ACC] rounded-2xl transition-all duration-300 ease-in-out', status === 'apply' ? 'bg-[#3B7ACC]' : 'bg-white hover:bg-[#3B7ACC]')}>
+                <span className={clsx('font-bold text-[20px] leading-[72px]', status !== 'apply' ? 'text-[#2F62A3] hover:text-white' : 'text-white')}>HOW TO APPLY</span>
             </div>
-            <div onClick={() => setStatus('applied')} className={clsx('flex-1 cursor-pointer flex items-center justify-center border-2 border-[#3B7ACC] rounded-2xl', status === 'applied' && 'bg-[#3B7ACC]')}>
-                <span className={clsx('font-bold text-[20px] leading-[72px]', status !== 'applied' ? 'text-[#2F62A3]' : 'text-white')}>AFTER APPLIED</span>
+            <div onClick={() => setStatus('applied')} className={clsx('flex-1 cursor-pointer flex items-center justify-center border-2 border-[#3B7ACC] rounded-2xl transition-all duration-300 ease-in-out', status === 'applied' ? 'bg-[#3B7ACC]' : 'bg-white hover:bg-[#3B7ACC]')}>
+                <span className={clsx('font-bold text-[20px] leading-[72px]', status !== 'applied' ? 'text-[#2F62A3] hover:text-white' : 'text-white')}>AFTER APPLIED</span>
             </div>
           </div>
           {

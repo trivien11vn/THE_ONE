@@ -39,7 +39,7 @@ const ContactUs = () => {
                                 <textarea className='w-full h-full font-normal text-[14px] leading-[20px] text-[#A9A9A9] border-none resize-none outline-none' placeholder='Enter Input'></textarea>
                             </div>
                         </div>
-                        <div className='w-full h-[52px] rounded-2xl flex items-center justify-center bg-[#3B7ACC] text-white'>
+                        <div className='w-full h-[52px] rounded-2xl flex items-center justify-center border border-transparent bg-[#3B7ACC] text-white hover:bg-white hover:text-[#3B7ACC] hover:border-[#3B7ACC] cursor-pointer transition-all duration-300 ease-in-out'>
                             Send Message
                         </div>
                     </div>

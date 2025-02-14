@@ -117,17 +117,17 @@ const Career = () => {
             <div className='flex flex-col gap-[80px] items-center'>
                 <span className='font-extrabold text-[40px] leading-[52px] underline uppercase'>Open Positions</span>
                 <div className='w-full flex justify-between'>
-                    <div className='w-[250px] h-[68px] rounded-2xl bg-[#3B7ACC] text-white uppercase flex items-center justify-center'>
+                    <div className='w-[250px] cursor-pointer h-[68px] rounded-2xl bg-[#3B7ACC] text-white uppercase flex items-center justify-center'>
                         <span className='font-bold text-[20px] leading-[72px]'>Developer</span>
                     </div>
-                    <div className='w-[250px] h-[68px] rounded-2xl border border-[#3B7ACC] text-white uppercase flex items-center justify-center'>
-                        <span className='font-bold text-[20px] text-[#2F62A3] leading-[72px]'>Marketing</span>
+                    <div className='w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
+                        <span className='font-bold text-[20px] leading-[72px]'>Marketing</span>
                     </div>
-                    <div className='w-[250px] h-[68px] rounded-2xl border border-[#3B7ACC] text-white uppercase flex items-center justify-center'>
-                        <span className='font-bold text-[20px] text-[#2F62A3] leading-[72px]'>Designer</span>
+                    <div className='w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
+                        <span className='font-bold text-[20px] leading-[72px]'>Designer</span>
                     </div>
-                    <div className='w-[250px] h-[68px] rounded-2xl border border-[#3B7ACC] text-white uppercase flex items-center justify-center'>
-                        <span className='font-bold text-[20px] text-[#2F62A3] leading-[72px]'>Researcher</span>
+                    <div className='w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
+                        <span className='font-bold text-[20px] leading-[72px]'>Researcher</span>
                     </div>
                 </div>
                 <div className='flex flex-col gap-[32px] w-[921px]'>

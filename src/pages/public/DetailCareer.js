@@ -1,8 +1,12 @@
 import { InputField } from 'components'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 
 const DetailCareer = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0)
+    }, [])
+
   return (
     <div className='w-full my-[24px] flex flex-col gap-2 relative'>
         <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
