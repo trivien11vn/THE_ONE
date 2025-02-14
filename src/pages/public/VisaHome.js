@@ -229,7 +229,7 @@ const VisaHome = () => {
                     <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center'>
                         <img src={person1} className='w-[325px] h-[320px]'/>
                         <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
-                            <div className='w-[325px] h-[52px]'>
+                            <div className='w-[325px] h-[52px] flex flex-col'>
                                 <span className='font-bold text-lg leading-[24px]'>Lorem Ipsum</span>
                                 <span>Job Title</span>
                             </div>
