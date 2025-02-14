@@ -26,7 +26,8 @@ const path = {
     BOOKING_FLIGHT: 'booking_flight',
     SEARCH_FLIGHT: 'search_flight',
     FILL_INFO_DETAIL: 'fill_info_detail',
-
+    REVIEW_INFO: 'review_info',
+    PAYMENT: 'payment_page',
 
     //USER LAYOUT
     USER: 'user',

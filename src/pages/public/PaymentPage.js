@@ -1,90 +1,54 @@
 import React, { useState } from 'react'
-import { FaCaretDown, FaPlus } from "react-icons/fa6";
-import { FaLongArrowAltLeft } from "react-icons/fa";
 import onepayMthodImage from '../../assets/onepay.svg'
 import paypalMthodImage from '../../assets/paypal.svg'
 import moneyIcon from '../../assets/money.svg'
 import moneyIcon1 from '../../assets/money_1.svg'
-import { useNavigate } from 'react-router-dom';
-import path from 'utils/path';
-import { GoArrowLeft } from 'react-icons/go';
+import { FaArrowRight } from 'react-icons/fa6'
+import { GoArrowLeft, GoDotFill } from 'react-icons/go'
+import bambooAir from '../../assets/airBamBoo.png'
+import { useNavigate } from 'react-router-dom'
+import path from 'utils/path'
 
-const ChoosingPaymentMethod = () => {
+const PaymentPage = () => {
     const [methodPayment, setMethodPayment] = useState('')
     const navigate = useNavigate()
+
   return (
-    <div className='w-full my-[24px] flex flex-col gap-2 relative'>
+    <div className='w-full my-[24px] flex flex-col gap-2 relative font-montserrat'>
         <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
         <div className='w-main h-[200px] mx-auto flex flex-col gap-2'>
-            <div className='flex justify-between items-center'>
-                <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA PAYMENT METHOD</div>
-                <div className='w-[210px] h-[61px] flex items-center justify-center bg-[#3B7ACC] text-white rounded-2xl'>
-                    <span className='font-normal text-[16px]'>Save & Exit</span>
-                </div>
+            <div className='flex justify-center items-center'>
+                <span className='font-extrabold text-[56px] leading-[64px]'>PAYMENT</span>
             </div>
             <div className='w-full flex justify-between relative'>
                 <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>
-                    <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center border border-[#D3D3D3] bg-[#D3D3D3] z-50'>
+                    <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#D3D3D3] z-50'>
                         <span className='font-extrabold text-[28px] leading-[36px] text-white'>1</span>
                     </div>
-                    <span className='font-thin text-[24px] leading-[36px] text-[#000000]'>Order Information</span>
+                    <span className='font-medium text-[24px] leading-[36px]'>Booking Information</span>
                 </div>
                 <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>
-                    <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center border bg-[#F08921] z-50'>
+                    <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#D3D3D3] z-50'>
                         <span className='font-extrabold text-[28px] leading-[36px] text-white'>2</span>
+                    </div>
+                    <span className='font-medium text-[24px] leading-[36px]'>Review Info</span>
+                </div>
+                <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>
+                    <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#F08921] z-50'>
+                        <span className='font-extrabold text-[28px] leading-[36px] text-white'>3</span>
                     </div>
                     <span className='font-bold text-[24px] leading-[36px]'>Payment</span>
                 </div>
-                <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>
-                    <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center border border-[#F08921] bg-white z-50'>
-                        <span className='font-extrabold text-[28px] leading-[36px] text-[#F08921]'>3</span>
-                    </div>
-                    <span className='font-medium text-[24px] leading-[36px]'>Confirmation</span>
-                </div>
                 <div className='w-[841px] h-[2px] absolute top-[40px] left-[170px] bg-[#D3D3D3]'></div>
             </div>
-        </div>  
-
-        <div className='w-main mx-auto mt-[100px] flex flex-col gap-4'>
-            <span className='font-extrabold text-[24px] leading-[32px]'>CUSTOMER'S ORDER REVIEW</span>
-            <div className='flex flex-col gap-[20px]'>
-                <div className='w-full h-[64px] border border-[#3B7ACC] rounded-md p-4 flex justify-between'>
-                    <div className='w-[420px] h-full flex gap-[40px] items-center'>
-                        <div className='w-[72px] h-[12px] bg-[#3B7ACC]'></div>
-                        <span className='font-bold text-[18px] leading-[24px] underline'>YOUR ORDER INFORMATION</span>
-                    </div>
-                    <div className='w-[40px] h-[40px] rounded-full border border-[#3B7ACC] flex items-center justify-center'>
-                        <FaCaretDown color='#3B7ACC' />
-                    </div>
-                </div>
-                <div className='w-full h-[64px] border border-[#3B7ACC] rounded-md p-4 flex justify-between'>
-                    <div className='w-[420px] h-full flex gap-[40px] items-center'>
-                        <div className='w-[72px] h-[12px] bg-[#3B7ACC]'></div>
-                        <span className='font-bold text-[18px] leading-[24px] underline'>YOUR ORDER INFORMATION</span>
-                    </div>
-                    <div className='w-[40px] h-[40px] rounded-full border border-[#3B7ACC] flex items-center justify-center'>
-                        <FaCaretDown color='#3B7ACC' />
-                    </div>
-                </div>
-                <div className='w-full h-[64px] border border-[#3B7ACC] rounded-md p-4 flex justify-between'>
-                    <div className='w-[420px] h-full flex gap-[40px] items-center'>
-                        <div className='w-[72px] h-[12px] bg-[#3B7ACC]'></div>
-                        <span className='font-bold text-[18px] leading-[24px] underline'>YOUR ORDER INFORMATION</span>
-                    </div>
-                    <div className='w-[40px] h-[40px] rounded-full border border-[#3B7ACC] flex items-center justify-center'>
-                        <FaCaretDown color='#3B7ACC'/>
-                    </div>
-                </div>
-            </div>
         </div>
-
         <div className='flex justify-between w-main mx-auto mt-[100px]'>
             <div className='flex flex-col w-[690px] gap-[40px]'>
-                <div className='w-[690px] h-[336px] border border-dashed border-[#DA857F] rounded p-8 bg-[#FFFCF7]'>
+                <div className='w-[690px] border border-dashed border-[#DA857F] rounded p-8 bg-[#FFFCF7]'>
                     <div className='w-full h-full flex flex-col gap-[24px]'>
                         <span className='font-extrabold text-[24px] leading-[32px]'>Payment Methods</span>
                         <div className='flex gap-[24px]'>
-                            <div className='flex gap-[8px] cursor-pointer' onClick={()=>{setMethodPayment('bank')}}>
+                            <div className='flex gap-[8px]' onClick={()=>{setMethodPayment('bank')}}>
                                 {
                                     methodPayment !== 'bank' 
                                     ?
@@ -159,7 +123,7 @@ const ChoosingPaymentMethod = () => {
 
                                 }
                             </div>
-                            <div className='flex gap-[8px] cursor-pointer' onClick={()=>{setMethodPayment('onepay')}}>
+                            <div className='flex gap-[8px]' onClick={()=>{setMethodPayment('onepay')}}>
                                 {
                                     methodPayment !== 'onepay' 
                                     ?
@@ -220,7 +184,7 @@ const ChoosingPaymentMethod = () => {
                                 }
 
                             </div>
-                            <div className='flex gap-[8px] cursor-pointer' onClick={()=>{setMethodPayment('paypal')}}>
+                            <div className='flex gap-[8px]' onClick={()=>{setMethodPayment('paypal')}}>
                                 {
                                     methodPayment !== 'paypal'
                                     ?
@@ -345,105 +309,148 @@ const ChoosingPaymentMethod = () => {
                         </div>
                     </div>
                 }
-
-                <div className='flex flex-col gap-[16px]'>
-                    <div className='flex gap-1 items-center'>
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" width="24" height="24" rx="4" fill="#3B7ACC"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7515 7.36894C19.0081 7.59985 19.0289 7.99504 18.798 8.2516L12.35 15.416C11.5379 16.3184 10.163 16.4309 9.21502 15.6725L6.27634 13.3215C6.0068 13.1059 5.9631 12.7126 6.17873 12.4431C6.39436 12.1735 6.78767 12.1298 7.05721 12.3455L9.99589 14.6964C10.4268 15.0411 11.0517 14.99 11.4209 14.5798L17.8689 7.4154C18.0998 7.15883 18.495 7.13803 18.7515 7.36894Z" fill="white"/>
-                        </svg>
-                        <span>I would like to confirm that the above information is correct.</span>
-                    </div>
-
-                    <div className='flex gap-1 items-center'>
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" width="24" height="24" rx="4" fill="#3B7ACC"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7515 7.36894C19.0081 7.59985 19.0289 7.99504 18.798 8.2516L12.35 15.416C11.5379 16.3184 10.163 16.4309 9.21502 15.6725L6.27634 13.3215C6.0068 13.1059 5.9631 12.7126 6.17873 12.4431C6.39436 12.1735 6.78767 12.1298 7.05721 12.3455L9.99589 14.6964C10.4268 15.0411 11.0517 14.99 11.4209 14.5798L17.8689 7.4154C18.0998 7.15883 18.495 7.13803 18.7515 7.36894Z" fill="white"/>
-                        </svg>
-                        <span>I have read and agree to the Terms and Conditions as well as the company's Policies  .</span>
-                    </div>
-                </div>
-
-                <div onClick={()=>{navigate(`/${path.CONFIRM_SUCCESS_TRANSFER}`)}} className='cursor-pointer w-[400px] h-[48px] bg-[#3B7ACC] rounded-lg mx-auto text-white flex items-center justify-center'>
+                <div onClick={()=>{navigate(`/${path.CONFIRM_SUCCESS}`)}} className='w-[400px] h-[48px] bg-[#3B7ACC] rounded-lg mx-auto text-white flex items-center justify-center cursor-pointer'>
                    <div className='font-bold text-[20px] leading-[72px]'>Proceed to Payment</div>
                 </div>
             </div>
-            <div className='flex flex-col gap-[24px] '>
-                <div className='w-[440px] h-[880px] bg-[#FFFCF7] border border-dashed border-[#DA857F] rounded p-8 flex flex-col items-center gap-[24px]'>
-                    <span className='text-black font-extrabold text-[24px] leading-[32px]'>ORDER SUMMARY</span>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Order Number: </span>
-                        <span>ABC123</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Number of Applicants: </span>
-                        <span>02</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Type of Visa: </span>
-                        <span>Lorem Ipsum Dolor Sit Amet</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Destination </span>
-                        <span>Lorem Ipsum Dolor Sit Amet</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Day of Arrival: </span>
-                        <span>DD/MM/YYYY</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Day of Return: </span>
-                        <span>DD/MM/YYYY</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Service Fees: </span>
-                        <span>40 USD per person</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Government Fees: </span>
-                        <span>50 USD per person</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Processing Time Fees: </span>
-                        <div className='flex flex-col gap-1 items-end'>
-                            <span>Super Urgent - Within 1 day</span>
-                            <span>- 50 USD per person</span>
+            <div className='w-[440px] flex flex-col gap-[24px]'>
+                <div className='p-8 w-[440px] h-fit bg-[#FFFCF7] border-2 border-dashed border-[#DA857F] rounded flex flex-col items-center gap-[24px]'>
+                    <div className='w-full flex flex-col gap-[24px]'>
+                        <div className='flex flex-col gap-[16px]'>
+                            <div className='flex gap-[24px] items-center'>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 21.9991H22M6.36 17.3991L4 16.9991L2 12.9991L3.1 12.4491C3.37916 12.3085 3.6874 12.2352 4 12.2352C4.3126 12.2352 4.62084 12.3085 4.9 12.4491L5.07 12.5491C5.34916 12.6898 5.6574 12.7631 5.97 12.7631C6.2826 12.7631 6.59084 12.6898 6.87 12.5491L8 11.9991L5 5.99915L5.9 5.54915C6.23267 5.38549 6.60429 5.31753 6.97335 5.35285C7.34242 5.38816 7.6944 5.52537 7.99 5.74915L12.01 8.74915C12.3066 8.97486 12.6604 9.11319 13.0315 9.14853C13.4025 9.18387 13.7761 9.11481 14.11 8.94915L18.3 6.88915C18.8354 6.61924 19.4523 6.55862 20.03 6.71915L21 6.99915C21.2004 7.0548 21.3859 7.15442 21.543 7.29075C21.7001 7.42708 21.8248 7.59671 21.9082 7.78729C21.9915 7.97787 22.0313 8.18463 22.0247 8.39252C22.0181 8.60042 21.9652 8.80423 21.87 8.98915L21.49 9.74915C21.26 10.2091 20.89 10.5891 20.42 10.8291L7.58 17.1991C7.20245 17.3862 6.77547 17.4492 6.36 17.3791V17.3991Z" stroke="#545454" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span className='font-extrabold text-[24px] leading-[32px]'>YOUR FLIGHT</span>
+                            </div>
+                            <div className='flex gap-[4px] font-bold text-[14px] items-center'>
+                                <span>Hồ Chí Minh</span>
+                                <FaArrowRight />
+                                <span>Singapore</span>
+                                <GoDotFill color='#3B7ACC'/>
+                                <span className='text-[#3B7ACC]'>Mon, 18 Sep 2023</span>
+                            </div>
+                            <div className='flex gap-[8px] font-bold text-[14px] items-center'>
+                                <img src={bambooAir} className='w-[30%] h-auto object-cover'/>
+                                <span className='font-bold text-[14px] leading-7'>Bamboo Airlines</span>
+                            </div>
+                            <div className='flex gap-[8px] w-full'>
+                                <div className='flex flex-col gap-[6px] flex-1'>
+                                    <span className='font-bold text-[14px] leading-[22px]'>17:20</span>
+                                    <div className='bg-[#E5E5E5] px-2 rounded-l-2xl rounded-r-2xl flex justify-center items-center w-fit'>
+                                        <span className='text-[#7F7F7F] font-semibold text-[12px]'>SGN</span>
+                                    </div>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.07755 13.9034L5.21481 12.3312C5.51196 12.1127 5.86109 11.996 6.21822 11.996L8.38391 11.996C8.88343 11.996 9.28837 12.4428 9.28837 12.994L9.28837 16.5002C9.28837 17.5029 10.4782 17.8794 10.9598 17.0292L13.2793 12.9341C13.6099 12.3505 14.1896 11.996 14.8133 11.996L16.337 11.996C17.4394 11.996 18.333 11.1024 18.333 10C18.333 8.89763 17.4394 8.00399 16.337 8.00399L14.8133 8.00399C14.1896 8.00399 13.6099 7.64946 13.2793 7.06586L10.9598 2.97084C10.4782 2.12056 9.28837 2.49709 9.28837 3.49978L9.28837 7.00598C9.28837 7.55716 8.88343 8.00399 8.38391 8.00399L6.21822 8.00399C5.86109 8.00399 5.51196 7.88734 5.21481 7.66876L3.07755 6.09656C2.30583 5.52886 1.35208 6.45789 1.76687 7.37327L2.55264 9.10736C2.80727 9.66929 2.80727 10.3307 2.55264 10.8926L1.76687 12.6267C1.35208 13.5421 2.30583 14.4711 3.07755 13.9034Z" fill="#E5E5E5"/>
+                                </svg>
+                                <div className='flex flex-col gap-[6px] flex-1'>
+                                    <span className='font-bold text-[14px] leading-[22px]'>01:00</span>
+                                    <div className='bg-[#E5E5E5] px-2 rounded-l-2xl rounded-r-2xl flex justify-center items-center w-fit'>
+                                        <span className='text-[#7F7F7F] font-semibold text-[12px]'>HND</span>
+                                    </div>
+                                </div>
+                                <span className='font-normal text-[12px] leading-[22px] flex-1'>+1day</span>
+                                <div className='flex flex-col gap-[6px] flex-1'>
+                                    <span className='font-bold text-[14px] leading-[22px]'>5h 40m</span>                    
+                                    <span className='font-montserrat font-normal text-[11px] leading-[22px] text-[#000000]'>Direct flight</span>
+                                </div>
+                            </div>
+                            <div className='flex gap-[8px] items-center'>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6C2 3.79086 3.79086 2 6 2Z" fill="#FF9500"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.25C12.4142 7.25 12.75 7.58579 12.75 8V9C12.75 9.41421 12.4142 9.75 12 9.75C11.5858 9.75 11.25 9.41421 11.25 9V8C11.25 7.58579 11.5858 7.25 12 7.25ZM12 10.75C12.4142 10.75 12.75 11.0858 12.75 11.5V16C12.75 16.4142 12.4142 16.75 12 16.75C11.5858 16.75 11.25 16.4142 11.25 16V11.5C11.25 11.0858 11.5858 10.75 12 10.75Z" fill="#FF9500"/>
+                                </svg>
+
+                                <span className='font-semibold text-[12px] leading-[16px]'>Stop to change flight at Seoul (2h 30m)</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Travel Insurance: </span>
-                        <span>50 USD per person</span>
-                    </div>
-                    <div className='w-[360px] h-[48px] flex rounded-lg border border-[#D3D3D3]'>
-                        <div className='flex-1 flex items-center justify-center bg-white rounded-l-lg'>
-                            <input placeholder='Enter your promote code here' className='outline-none'/>
+                        <div class="border-t-2 border-dashed border-[#545454]"></div>
+                        <div className='flex flex-col gap-[16px]'>
+                            <div className='flex gap-[4px] font-bold text-[14px] items-center'>
+                                <span>Hồ Chí Minh</span>
+                                <FaArrowRight />
+                                <span>Singapore</span>
+                                <GoDotFill color='#3B7ACC'/>
+                                <span className='text-[#3B7ACC]'>Mon, 18 Sep 2023</span>
+                            </div>
+                            <div className='flex gap-[8px] font-bold text-[14px] items-center'>
+                                <img src={bambooAir} className='w-[30%] h-auto object-cover'/>
+                                <span className='font-bold text-[14px] leading-7'>Bamboo Airlines</span>
+                            </div>
+                            <div className='flex gap-[8px] w-full'>
+                                <div className='flex flex-col gap-[6px] flex-1'>
+                                    <span className='font-bold text-[14px] leading-[22px]'>17:20</span>
+                                    <div className='bg-[#E5E5E5] px-2 rounded-l-2xl rounded-r-2xl flex justify-center items-center w-fit'>
+                                        <span className='text-[#7F7F7F] font-semibold text-[12px]'>SGN</span>
+                                    </div>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.07755 13.9034L5.21481 12.3312C5.51196 12.1127 5.86109 11.996 6.21822 11.996L8.38391 11.996C8.88343 11.996 9.28837 12.4428 9.28837 12.994L9.28837 16.5002C9.28837 17.5029 10.4782 17.8794 10.9598 17.0292L13.2793 12.9341C13.6099 12.3505 14.1896 11.996 14.8133 11.996L16.337 11.996C17.4394 11.996 18.333 11.1024 18.333 10C18.333 8.89763 17.4394 8.00399 16.337 8.00399L14.8133 8.00399C14.1896 8.00399 13.6099 7.64946 13.2793 7.06586L10.9598 2.97084C10.4782 2.12056 9.28837 2.49709 9.28837 3.49978L9.28837 7.00598C9.28837 7.55716 8.88343 8.00399 8.38391 8.00399L6.21822 8.00399C5.86109 8.00399 5.51196 7.88734 5.21481 7.66876L3.07755 6.09656C2.30583 5.52886 1.35208 6.45789 1.76687 7.37327L2.55264 9.10736C2.80727 9.66929 2.80727 10.3307 2.55264 10.8926L1.76687 12.6267C1.35208 13.5421 2.30583 14.4711 3.07755 13.9034Z" fill="#E5E5E5"/>
+                                </svg>
+                                <div className='flex flex-col gap-[6px] flex-1'>
+                                    <span className='font-bold text-[14px] leading-[22px]'>01:00</span>
+                                    <div className='bg-[#E5E5E5] px-2 rounded-l-2xl rounded-r-2xl flex justify-center items-center w-fit'>
+                                        <span className='text-[#7F7F7F] font-semibold text-[12px]'>HND</span>
+                                    </div>
+                                </div>
+                                <span className='font-normal text-[12px] leading-[22px] flex-1'>+1day</span>
+                                <div className='flex flex-col gap-[6px] flex-1'>
+                                    <span className='font-bold text-[14px] leading-[22px]'>5h 40m</span>                    
+                                    <span className='font-montserrat font-normal text-[11px] leading-[22px] text-[#000000]'>Direct flight</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className='w-[120px] bg-[#3B7ACC] text-white flex items-center justify-center rounded-r-lg'>Apply Now</div>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Subtotal: </span>
-                        <span>$USD</span>
-                    </div>
-                    <div className='flex justify-between w-full'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Discount: </span>
-                        <span>$USD</span>
-                    </div>
-                    <div className='flex justify-between w-full text-[#3B7ACC]'>
-                        <span className='font-semibold text-[16px] leading-[24px]'>Total Amount: </span>
-                        <span className='font-bold text-[16px] leading-[24px]'>$USD</span>
+                        <div class="border-t-2 border-dashed border-[#545454]"></div>
+                        <div className='flex flex-col gap-[24px]'>
+                            <div className='w-[360px] h-[48px] flex rounded-lg border border-[#D3D3D3]'>
+                                <div className='flex-1 flex items-center bg-white rounded-l-lg pl-2'>
+                                    <input placeholder='Enter your promote code here' className='outline-none font-normal text-[12px] leading-[16px]'/>
+                                </div>
+                                <div className='w-[120px] bg-[#3B7ACC] text-white flex items-center justify-center rounded-r-lg'>Apply Now</div>
+                            </div>
+                            <div className='flex flex-col gap-[24px]'>
+                                <div className='flex flex-col gap-[16px]'>
+                                    <div className='w-full flex justify-between items-center'>
+                                        <span className='font-semibold text-[16px] leading-[24px] text-[#3B7ACC]'>Total Amount: </span>
+                                        <span className='font-bold text-[16px] leading-[24px] text-[#3B7ACC]'>4.761.840 VND</span>
+                                    </div>
+                                    <div className='w-full flex justify-between items-center'>
+                                        <span className='font-semibold text-[16px] leading-[24px]'>VietJet Air (Adult) x1 </span>
+                                        <span className='font-normal text-[14px] leading-[24px]'>2.952.000 VND</span>
+                                    </div>
+                                    <div className='w-full flex justify-between items-center'>
+                                        <span className='font-semibold text-[16px] leading-[24px]'>Vietravel Airlines (Adult) x1 </span>
+                                        <span className='font-normal text-[14px] leading-[24px]'>812.440 VND</span>
+                                    </div>
+                                    <div className='w-full flex justify-between items-center'>
+                                        <span className='font-semibold text-[16px] leading-[24px]'>VietJet Air (Adult) x1 </span>
+                                        <span className='font-normal text-[14px] leading-[24px]'>997.400 VND</span>
+                                    </div>
+                                    <div className='w-full flex justify-between items-center'>
+                                        <span className='font-semibold text-[16px] leading-[24px]'>Travel Insurance </span>
+                                        <span className='font-normal text-[14px] leading-[24px]'>500,000 VND</span>
+                                    </div>
+                                </div>
+                                <div className='w-full flex justify-between items-center'>
+                                    <span className='font-bold text-[16px] leading-[24px] text-[#272727]'>Already had an account?</span>
+                                    <span className='font-bold text-[16px] leading-[24px] text-[#3B7ACC]'>Sign In Now!</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className='flex flex-col gap-[40px]'>
-                    <div className='flex gap-1'>
-                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.5 19.9998L18.4213 22.3369C19.1178 22.8941 20.1295 22.8042 20.7168 22.1329L25.5 16.6665M9.46268 8.23859L17.7924 4.5365C19.5161 3.77038 21.4838 3.77038 23.2076 4.5365L31.5042 8.22391C33.9304 9.30221 35.523 11.7257 35.353 14.3753C34.7009 24.5383 31.7953 29.1326 23.941 34.4626C21.8682 35.8692 19.134 35.8657 17.0596 34.4614C9.22943 29.1602 6.21603 24.63 5.61664 14.3396C5.46332 11.7075 7.05331 9.30942 9.46268 8.23859Z" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <div className='flex flex-col gap-[20px]'>
+                    <div className='flex gap-[8px] items-center'>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.0009 19.9988L17.9223 22.3359C18.6188 22.8931 19.6304 22.8032 20.2178 22.132L25.0009 16.6655M8.96365 8.23762L17.2934 4.53553C19.0171 3.76941 20.9848 3.76941 22.7085 4.53553L31.0052 8.22294C33.4314 9.30124 35.0239 11.7248 34.8539 14.3743C34.2019 24.5373 31.2963 29.1316 23.442 34.4616C21.3692 35.8682 18.6349 35.8648 16.5606 34.4604C8.73041 29.1593 5.717 24.629 5.11761 14.3387C4.9643 11.7065 6.55428 9.30845 8.96365 8.23762Z" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <div className='flex flex-col gap-1'>
+                        <div className='flex flex-col'>
                             <span className='font-semibold text-[14px] leading-[22px]'>Your data is secured by us!</span>
                             <span className='font-normal text-[12px] leading-[16px]'>For more details please read Global eVISA Security Policies</span>
                         </div>
                     </div>
-                    <div className='flex gap-[24px] items-center cursor-pointer' onClick={()=>{navigate(`/${path.FILL_INFO_WEB}`)}}>
+                    <div className='flex gap-[24px] items-center cursor-pointer' onClick={()=>{navigate(`/${path.FILL_INFO_DETAIL}`)}}>
                         <div className='px-12 py-4 text-white bg-[#3B7ACC]'><GoArrowLeft size={24}/></div>
                         <span className='text-[#2F62A3] font-bold text-[14px] leading-[22px] hover:underline'>Back to previous step</span>
                     </div>
@@ -454,4 +461,4 @@ const ChoosingPaymentMethod = () => {
   )
 }
 
-export default ChoosingPaymentMethod
+export default PaymentPage

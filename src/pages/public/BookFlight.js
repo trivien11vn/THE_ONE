@@ -7,7 +7,11 @@ import scenery3 from '../../assets/image_12.jpg'
 import scenery4 from '../../assets/image_14.jpg'
 import image4 from '../../assets/imge_4.jpg'
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
+import { LuMoveUpRight } from 'react-icons/lu';
+import { useNavigate } from 'react-router-dom';
+import path from 'utils/path';
 const BookFlight = () => {
+    const navigate = useNavigate()
     const [roundTrip, setRoundTrip] = useState(true);
     return (
         <div className='w-full my-[24px] flex flex-col gap-8 relative'>
@@ -60,6 +64,10 @@ const BookFlight = () => {
                             <InputField titleColor='#fff' title={'Number of Passenger'} />
                         </div>
                     </div>
+                    <button onClick={()=>{navigate(`/${path.SEARCH_FLIGHT}`)}} className="bg-[#F08921] border-2 border-white rounded-xl px-6 py-2 text-white text-lg font-bold flex gap-8 items-center">
+                        <span>SEARCH YOUR FLIGHT</span>
+                        <LuMoveUpRight />
+                    </button>
                 </div>
                 <div className='flex justify-between items-center'>
                     <div className='flex flex-col gap-4'>

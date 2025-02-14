@@ -9,10 +9,13 @@ import item3 from '../../assets/item3.svg'
 import person1 from '../../assets/person1.jpg'
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { BsFillStarFill } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
+import path from 'utils/path';
 
 const VisaHome = () => {
+    const navigate = useNavigate()
   return (
-    <div className='mt-[24px] full relative w-full'>
+    <div className='my-[24px] full relative w-full'>
         {/* <div className='w-[1313px] h-[686p] relative'>
             <div className='flex w-[759px] h-[240px] gap-[56px]'>
                 <div className='w-[80px] h-[20px] my-auto bg-[#F08921]'></div>
@@ -46,7 +49,7 @@ const VisaHome = () => {
                             <div className='w-[300px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                         </div>
                     </div>
-                    <div className='w-[645px] h-[48px] rounded-lg bg-[#3B7ACC] flex justify-center items-center text-white font-[700px] leading-[24px] text-[16px] gap-1'>
+                    <div onClick={() => {navigate(`/${path.VISA_APPLY}`)}} className='cursor-pointer w-[645px] h-[48px] rounded-lg bg-[#3B7ACC] flex justify-center items-center text-white font-[700px] leading-[24px] text-[16px] gap-1'>
                         GET STARTED
                         <GoArrowUpRight />
                     </div>
@@ -130,7 +133,7 @@ const VisaHome = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
+                <div onClick={()=>{navigate(`/${path.VISA_APPLY}`)}} className='cursor-pointer w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
                     <span className='uppercase text-[16px] font-bold leading-[24px]'>GET STARTED</span>
                     <GoArrowUpRight />
                 </div>
@@ -174,7 +177,7 @@ const VisaHome = () => {
                     </span>
                 </div>
             </div>
-            <div className='w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
+            <div onClick={()=>{navigate(`/${path.VISA_APPLY}`)}} className='cursor-pointer w-[300px] h-[56px] flex bg-[#3B7ACC] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
                 <span className='uppercase text-[16px] font-bold leading-[24px]'>GET STARTED</span>
                 <GoArrowUpRight />
             </div>
@@ -247,7 +250,7 @@ const VisaHome = () => {
                     </div>
                     
                 </div>
-                <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] absolute right-[-90px] top-1/2'>
+                <div onClick={()=>{navigate(`/${path.VISA_APPLY}`)}} className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] absolute right-[-90px] top-1/2'>
                     <SlArrowRight/>
                 </div>
             </div>

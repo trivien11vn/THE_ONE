@@ -9,7 +9,7 @@ const ConfirmFail = () => {
             <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
             <div className='w-main h-[200px] mx-auto flex flex-col gap-2'>
                 <div className='flex items-center'>
-                    <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA PAYMENT METHOD</div>
+                    <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA ORDER CONFIRMATION</div>
                 </div>
                 <div className='w-full flex justify-between relative'>
                     <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>
@@ -35,7 +35,7 @@ const ConfirmFail = () => {
             </div>
             <div className='w-main mx-auto flex items-end mt-[100px]'>
                 <div className='flex flex-col gap-6'>
-                    <span className='font-extrabold text-[40px] leading-[52px] underline'>YOUR ORDER WAS DONE SUCCESSFULLY!</span>
+                    <span className='font-extrabold text-[40px] leading-[52px] underline'>YOUR ORDER WAS SUCCESSFULLY CANCELED!</span>
                     <span className='font-bold text-[16px] leading-[24px]'>Order Code: ABCYYZ123654</span>
                     <span className='font-normal text-[16px] leading-[24px]'>If you initiated this cancellation, please be assured that your payment has been voided, and you will not be charged for this transaction. </span>
                     <span className='font-normal text-[16px] leading-[24px]'>If you still wish to proceed with the payment, please follow the link below to make an online payment: </span>

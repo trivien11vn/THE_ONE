@@ -2,12 +2,15 @@ import React from 'react'
 import item1 from '../../assets/item1.svg'
 import item2 from '../../assets/item2.svg'
 import item3 from '../../assets/item3.svg'
+import { useNavigate } from 'react-router-dom'
+import path from 'utils/path'
 
 const VisaApply = () => {
+    const navigate = useNavigate()
   return (
-    <div className='mt-[24px] h-[2600px] full relative w-full flex flex-col gap-[40px]'>
-        <div className='w-[728px] h-[40px] flex justify-between items-start'>
-            <div className='w-[80px] h-[20px] bg-[#F08921]'></div>
+    <div className='my-[24px] full relative w-full flex flex-col gap-[40px]'>
+        <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
+        <div className='w-main mx-auto h-[40px] flex justify-between items-start'>
             <div className='w-[592px] h-[40px] flex items-center gap-[16px]'>
                 <div className='w-[88px] h-[40px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] flex items-center justify-center'>Home</div>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,19 +31,19 @@ const VisaApply = () => {
                 <span className='font-normal text-[20px] text-[#272727] leading-[24px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
             </div>
             <div className='flex gap-[54px] items-end'>
-                <div className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div className='w-[230px] flex flex-col gap-2'>
                     <span className='font-semibold text-[18px] leading-[24px]'>Your Nationality</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                 </div>
-                <div className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div className='w-[230px] flex flex-col gap-2'>
                     <span className='font-semibold text-[18px] leading-[24px]'>Travelling to</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                 </div>
-                <div className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div className='w-[230px] flex flex-col gap-2'>
                     <span className='font-semibold text-[18px] leading-[24px]'>Purpose</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                 </div>
-                <div className='w-full h-[56px] bg-[#F08921] text-white rounded-lg flex items-center justify-center'>
+                <div onClick={()=>{navigate(`/${path.FILL_INFO_WEB}`)}} className='cursor-pointer w-full h-[56px] bg-[#F08921] text-white rounded-lg flex items-center justify-center'>
                     <span className='font-bold text-[16px] leading-[24px]'>APPLY NOW </span>
                 </div>
             </div>
@@ -139,7 +142,7 @@ const VisaApply = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-main h-[692px] mx-auto flex flex-col gap-[80px]'>
+            <div className='w-main mx-auto flex flex-col gap-[80px]'>
                 <span className='font-extrabold text-[40px] leading-[52px] underline'>HOW TO APPLY</span>
                 <div className='flex flex-col gap-[40px] justify-center'>
                     <div className='w-[1172px] h-[576px] flex gap-[68px]'>
@@ -177,7 +180,7 @@ const VisaApply = () => {
                             </span>
                         </div>
                     </div>
-                    <div className='w-[300px] h-[56px] mx-auto bg-[#F08921] rounded-lg flex items-center justify-center text-white'>
+                    <div onClick={()=>{navigate(`/${path.FILL_INFO_WEB}`)}} className='cursor-pointer w-[300px] h-[56px] mx-auto bg-[#F08921] rounded-lg flex items-center justify-center text-white'>
                         <span className='font-bold text-[16px] leading-[24px]'>APPLY NOW</span>
                     </div>
                 </div>

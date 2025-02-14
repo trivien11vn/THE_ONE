@@ -10,6 +10,8 @@ import MyBooking from 'pages/public/MyBooking';
 import MyInvoice from 'pages/public/MyInvoice';
 import MyProfile from 'pages/public/MyProfile';
 import MyBookingDetail from 'pages/public/MyBookingDetail';
+import ReviewInfo from 'pages/public/ReviewInfo';
+import PaymentPage from 'pages/public/PaymentPage';
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
           <Route path={path.BOOKING_FLIGHT} element={<BookFlight />} />
           <Route path={path.SEARCH_FLIGHT} element={<SearchFlight />} />
           <Route path={path.FILL_INFO_DETAIL} element={<FillInfoDetail />} />
+          <Route path={path.REVIEW_INFO} element={<ReviewInfo />} />
+          <Route path={path.PAYMENT} element={<PaymentPage />} />
 
           <Route path={path.USER} element={<UserLayout />}>
             <Route path='' element={<MyAccount />} /> 

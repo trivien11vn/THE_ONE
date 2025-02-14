@@ -7,7 +7,7 @@ const ConfirmSuccess = () => {
         <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
         <div className='w-main h-[200px] mx-auto flex flex-col gap-2'>
             <div className='flex items-center'>
-                <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA PAYMENT METHOD</div>
+                <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA ORDER CONFIRMATION</div>
             </div>
             <div className='w-full flex justify-between relative'>
                 <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>

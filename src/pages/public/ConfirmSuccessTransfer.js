@@ -10,7 +10,7 @@ const ConfirmSuccessTransfer = () => {
         <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
         <div className='w-main h-[200px] mx-auto flex flex-col gap-2'>
             <div className='flex items-center'>
-                <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA PAYMENT METHOD</div>
+                <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA ORDER CONFIRMATION</div>
             </div>
             <div className='w-full flex justify-between relative'>
                 <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>
@@ -36,7 +36,7 @@ const ConfirmSuccessTransfer = () => {
         </div> 
         <div className='w-main mx-auto flex mt-[100px] items-end'>
           <div className='flex flex-col gap-6'>
-            <span className='font-extrabold text-[40px] leading-[52px] underline'>YOUR ORDER WAS DONE SUCCESSFULLY!</span>
+            <span className='font-extrabold text-[40px] leading-[52px] underline'>YOUR ORDER WAS CREATED SUCCESSFULLY!</span>
             <span className='font-bold text-[16px] leading-[24px]'>Order Code: ABCYYZ123654</span>
             <span className='font-normal text-[16px] leading-[24px]'>We are delighted to inform you that your order has been placed successfully! In order for us to proceed your order swiftly, kindly make the payment using the provided bank transfer details below</span>
             <div className='w-[690px] h-[650px] p-4 border border-dashed border-[#DA857F] rouded bg-[#FFFCF7]'>
@@ -98,6 +98,9 @@ const ConfirmSuccessTransfer = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='mx-auto w-[288px] h-[48px] bg-[#F08921] text-white rounded-2xl flex items-center justify-center'>
+              <span className='font-bold text-[16px] leading-[24px]'>Go to my order</span>
             </div>
           </div>
           <img src={paymentSuccess1} />

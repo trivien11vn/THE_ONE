@@ -1,8 +1,11 @@
 import React from 'react'
 import { IoIosArrowDown } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
+import path from 'utils/path';
 
 const FillInfoWeb = () => {
+    const navigate = useNavigate()
   return (
     <div className='w-full my-[24px] flex flex-col gap-2 relative'>
         <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
@@ -498,7 +501,7 @@ const FillInfoWeb = () => {
                     <span className='font-semibold text-[16px] leading-[24px]'>Total Amount: </span>
                     <span className='font-bold text-[16px] leading-[24px]'>$USD</span>
                 </div>
-                <div className='w-full h-[48px] rounded-lg bg-[#F08921] flex items-center justify-center text-white'>Go to payment page</div>
+                <div onClick={()=>{navigate(`/${path.CHOOSING_PAYMENT_METHOD}`)}} className='cursor-pointer w-full h-[48px] rounded-lg bg-[#F08921] flex items-center justify-center text-white'>Go to payment page</div>
             </div>
         </div>
     </div>
