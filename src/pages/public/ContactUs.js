@@ -4,8 +4,10 @@ import { LuMapPin } from "react-icons/lu";
 import { BiPhoneCall } from "react-icons/bi";
 import { SlPhone } from "react-icons/sl";
 import { HiOutlineMail } from "react-icons/hi";
+import { useNavigate } from 'react-router-dom';
 
 const ContactUs = () => {
+    const navigate = useNavigate()
     return (
         <div className='w-full my-[24px] flex flex-col gap-2 relative'>
             <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
@@ -42,7 +44,7 @@ const ContactUs = () => {
                         </div>
                     </div>
                     <div className='w-[480px] flex flex-col gap-[16px]'>
-                        <img src={map} alt='map' />
+                        <img className='cursor-pointer' onClick={()=>{window.location.href = 'https://www.google.com/maps/place/40+Thi%C3%AAn+Ph%C6%B0%E1%BB%9Bc,+Ph%C6%B0%E1%BB%9Dng+9,+T%C3%A2n+B%C3%ACnh,+H%E1%BB%93+Ch%C3%AD+Minh/@10.7774956,106.6548317,19z/data=!3m1!4b1!4m6!3m5!1s0x31752eb8e133f271:0xb80bdd892535dd1f!8m2!3d10.7774956!4d106.6548317!16s%2Fg%2F11k9mygtcd?entry=ttu&g_ep=EgoyMDI1MDIxMS4wIKXMDSoASAFQAw%3D%3D';}} src={map} alt='map' />
                         <div className='flex flex-col gap-[16px]'>
                             <div className='flex justify-between items-start'>
                                 <LuMapPin size={20} color='#28303F'/>

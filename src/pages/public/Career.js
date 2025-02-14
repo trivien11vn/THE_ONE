@@ -3,7 +3,10 @@ import abousUsImage from '../../assets/about_us.svg'
 import { GoArrowUpRight } from 'react-icons/go'
 import careerImage from '../../assets/career.svg'
 import working from '../../assets/working.jpg'
+import { useNavigate } from 'react-router-dom'
+import path from 'utils/path'
 const Career = () => {
+    const navigate = useNavigate()
   return (
     <div className='w-full my-[24px] flex flex-col gap-2 relative'>
         <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
@@ -134,7 +137,7 @@ const Career = () => {
                                 <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Android Engineer</span>
                                 <span className='font-normal text-[16px] leading-[24px]'>San Francisco / New Delhi Full-Time</span>
                             </div>
-                            <div className='bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
+                            <div onClick={()=>{navigate(`/${path.DETAIL_CAREER}`)}} className='cursor-pointer bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
                         </div>
                         <div className='w-full h-[1px] bg-[#D3D3D3]'></div>
                     </div>
@@ -144,7 +147,7 @@ const Career = () => {
                                 <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>iOS Engineer</span>
                                 <span className='font-normal text-[16px] leading-[24px]'>San Francisco  Full-Time</span>
                             </div>
-                            <div className='bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
+                             <div onClick={()=>{navigate(`/${path.DETAIL_CAREER}`)}} className='cursor-pointer bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
                         </div>
                         <div className='w-full h-[1px] bg-[#D3D3D3]'></div>
                     </div>
@@ -154,7 +157,7 @@ const Career = () => {
                                 <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Backend Engineer</span>
                                 <span className='font-normal text-[16px] leading-[24px]'>New Delhi Full-Time</span>
                             </div>
-                            <div className='bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
+                             <div onClick={()=>{navigate(`/${path.DETAIL_CAREER}`)}} className='cursor-pointer bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
                         </div>
                         <div className='w-full h-[1px] bg-[#D3D3D3]'></div>
                     </div>
@@ -164,7 +167,7 @@ const Career = () => {
                                 <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Frontend Engineer</span>
                                 <span className='font-normal text-[16px] leading-[24px]'>San Francisco  Full-Time</span>
                             </div>
-                            <div className='bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
+                             <div onClick={()=>{navigate(`/${path.DETAIL_CAREER}`)}} className='cursor-pointer bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
                         </div>
                         <div className='w-full h-[1px] bg-[#D3D3D3]'></div>
                     </div>

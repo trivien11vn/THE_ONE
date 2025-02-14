@@ -4,9 +4,12 @@ import { GoArrowUpRight } from "react-icons/go";
 import linkedIn from '../../assets/likedIn.svg'
 import facebook from '../../assets/facebook.svg'
 import twitter from '../../assets/twitter.svg'
+import { useNavigate } from 'react-router-dom';
+import path from 'utils/path';
 // import icons from '../../ultils/icon'
 const Footer = () => {
   // const {MdEmail} = icons
+  const navigate = useNavigate()
   return (
     <div className='w-full min-h-[440px] bg-[#3B7ACC] flex justify-center items-center text-white'>
       <div className='w-main h-[342px] flex flex-col gap-[40px]'>
@@ -16,18 +19,18 @@ const Footer = () => {
             <div className='flex flex-col gap-[16px] w-[136px] h-[218px]'>
               <span className='font-bold text-[20px] leading-[34px]'>Global eVISA</span>
               <div className='flex flex-col gap-[8px]'>
-                <span className='leading-[20px] font-[400px] text-[14px]'>About Us</span>
-                <span className='leading-[20px] font-[400px] text-[14px]'>Careers</span>
-                <span className='leading-[20px] font-[400px] text-[14px]'>Policies</span>
-                <span className='leading-[20px] font-[400px] text-[14px]'>Term & Conditions</span>
+                <span onClick={()=>{navigate(`/${path.ABOUT_US}`)}} className='cursor-pointer leading-[20px] font-[400px] text-[14px] hover:underline'>About Us</span>
+                <span onClick={()=>{navigate(`/${path.CAREER}`)}} className='cursor-pointer leading-[20px] font-[400px] text-[14px] hover:underline'>Careers</span>
+                <span onClick={()=>{navigate(`/${path.POLICIES}`)}} className='cursor-pointer leading-[20px] font-[400px] text-[14px] hover:underline'>Policies</span>
+                <span onClick={()=>{navigate(`/${path.TERM_AND_CONDITION}`)}} className='cursor-pointer leading-[20px] font-[400px] text-[14px] hover:underline'>Term & Conditions</span>
               </div>
             </div>
             <div className='flex flex-col gap-[16px] w-[152px] h-[168px]'>
               <span className='font-bold text-[20px] leading-[34px]'>Need to Know</span>
               <div className='flex flex-col gap-[8px]'>
-                <span className='leading-[20px] font-[400px] text-[14px]'>How it works</span>
-                <span className='leading-[20px] font-[400px] text-[14px]'>FAQs</span>
-                <span className='leading-[20px] font-[400px] text-[14px]'>Blogs</span>
+                <span onClick={()=>{navigate(`/${path.CONTENT_CHECK_ILLEGAL}`)}} className='cursor-pointer leading-[20px] font-[400px] text-[14px]'>How it works</span>
+                <span onClick={()=>{navigate(`/${path.FAQ}`)}} className='cursor-pointer leading-[20px] font-[400px] text-[14px]'>FAQs</span>
+                <span onClick={()=>{navigate(`/${path.BLOGS}`)}} className='cursor-pointer leading-[20px] font-[400px] text-[14px]'>Blogs</span>
               </div>
             </div>
             <div className='flex flex-col gap-[16px] w-[219px] h-[280px]'>
