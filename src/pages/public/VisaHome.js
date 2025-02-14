@@ -198,58 +198,58 @@ const VisaHome = () => {
                     <SlArrowLeft />
                 </div>
                 <div className='w-main h-[588px] flex gap-[48px]'>
-                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-transform transform hover:scale-110 duration-300 ease-in-out cursor-pointer'>
-                        <img src={person1} className='w-[325px] h-[320px]'/>
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
+                        <img src={person1} className='w-[325px] h-[320px]' />
                         <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
                             <div className='w-[325px] h-[52px] flex flex-col'>
                                 <span className='font-bold text-lg leading-[24px]'>Lorem Ipsum</span>
                                 <span>Job Title</span>
                             </div>
                             <div className='w-[128px] h-[22px] flex gap-[2px]'>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                            </div>
-                            <span className='font-normal italic text-[12px] leading-[16px]'>
-                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
-                            </span>
-                            
-                        </div>
-                    </div>
-                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-transform transform hover:scale-110 duration-300 ease-in-out cursor-pointer'>
-                        <img src={person1} className='w-[325px] h-[320px]'/>
-                        <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
-                            <div className='w-[325px] h-[52px] flex flex-col'>
-                                <span className='font-bold text-lg leading-[24px]'>Lorem Ipsum</span>
-                                <span>Job Title</span>
-                            </div>
-                            <div className='w-[128px] h-[22px] flex gap-[2px]'>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
                             </div>
                             <span className='font-normal italic text-[12px] leading-[16px]'>
                                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
                             </span>
                         </div>
                     </div>
-                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-transform transform hover:scale-110 duration-300 ease-in-out cursor-pointer'>
-                        <img src={person1} className='w-[325px] h-[320px]'/>
+
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
+                        <img src={person1} className='w-[325px] h-[320px]' />
                         <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
                             <div className='w-[325px] h-[52px] flex flex-col'>
                                 <span className='font-bold text-lg leading-[24px]'>Lorem Ipsum</span>
                                 <span>Job Title</span>
                             </div>
                             <div className='w-[128px] h-[22px] flex gap-[2px]'>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
-                                <BsFillStarFill color='#EFA969'/>
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                            </div>
+                            <span className='font-normal italic text-[12px] leading-[16px]'>
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
+                            </span>
+                        </div>
+                    </div>
+                    <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
+                        <img src={person1} className='w-[325px] h-[320px]' />
+                        <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
+                            <div className='w-[325px] h-[52px] flex flex-col'>
+                                <span className='font-bold text-lg leading-[24px]'>Lorem Ipsum</span>
+                                <span>Job Title</span>
+                            </div>
+                            <div className='w-[128px] h-[22px] flex gap-[2px]'>
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
+                                <BsFillStarFill color='#EFA969' />
                             </div>
                             <span className='font-normal italic text-[12px] leading-[16px]'>
                                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
