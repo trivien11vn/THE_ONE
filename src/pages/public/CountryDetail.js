@@ -171,24 +171,23 @@ const CountryDetail = () => {
             </div>
 
             <div className='w-main mx-auto flex gap-[54px] items-end'>
-                <div ref={showSelectRef} className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div ref={showSelectRef} className='w-[230px] h-[88px] flex flex-col gap-2 cursor-pointer relative' onClick={handleShowSelectCountry}>
                     <span className='font-semibold text-[18px] leading-[24px]'>Your Nationality</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                     {showSelectCountry && <SelectCountry />}
                 </div>
-                <div ref={showSelectTravelRef} className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div ref={showSelectTravelRef} className='w-[230px] h-[88px] flex flex-col gap-2 cursor-pointer relative' onClick={handleShowSelectTravel}>
                     <span className='font-semibold text-[18px] leading-[24px]'>Travelling to</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                     {showSelectTravel && <SelectTravel />}
                 </div>
-                <div ref={showSelectPurposeRef} className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div ref={showSelectPurposeRef} className='w-[230px] h-[88px] flex flex-col gap-2 cursor-pointer relative' onClick={handleShowSelectPurpose}>
                     <span className='font-semibold text-[18px] leading-[24px]'>Purpose</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                     {showSelectPurpose && <SelectPurpose />}
                 </div>
-                <div className='w-full h-[56px] bg-[#F08921] text-white rounded-lg flex items-center justify-center'>
+                <div onClick={()=>{navigate(`/${path.VISA_APPLY}`)}} className='cursor-pointer w-full h-[56px] bg-[#F08921] text-white rounded-lg flex items-center justify-center'>
                     <span className='font-bold text-[16px] leading-[24px]'>APPLY NOW </span>
-                    {showSelectPurpose && <SelectPurpose />}
                 </div>
             </div>
 

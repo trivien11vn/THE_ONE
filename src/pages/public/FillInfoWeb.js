@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
@@ -6,13 +6,15 @@ import path from 'utils/path';
 
 const FillInfoWeb = () => {
     const navigate = useNavigate()
+    const [confirm1, setConfirm1] = useState(true)
+    const [confirm2, setConfirm2] = useState(true)
   return (
     <div className='w-full my-[24px] flex flex-col gap-2 relative'>
         <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
         <div className='w-main h-[200px] mx-auto flex flex-col gap-2'>
             <div className='flex justify-between items-center'>
                 <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA APPLICATION FORM</div>
-                <div className='w-[210px] h-[61px] flex items-center justify-center bg-[#3B7ACC] text-white rounded-2xl'>
+                <div onClick={()=>{navigate(`/`)}} className='border border-transparent w-[210px] h-[61px] flex items-center justify-center bg-[#3B7ACC] text-white rounded-2xl hover:bg-white hover:text-[#3B7ACC] hover:border-[#3B7ACC] cursor-pointer transition-all duration-300 ease-in-out'>
                     <span className='font-normal text-[16px]'>Save & Exit</span>
                 </div>
             </div>
@@ -421,19 +423,30 @@ const FillInfoWeb = () => {
                 </div>
 
                 <div className='flex flex-col gap-[16px]'>
-                    <div className='flex gap-1 items-center'>
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" width="24" height="24" rx="4" fill="#3B7ACC"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7515 7.36894C19.0081 7.59985 19.0289 7.99504 18.798 8.2516L12.35 15.416C11.5379 16.3184 10.163 16.4309 9.21502 15.6725L6.27634 13.3215C6.0068 13.1059 5.9631 12.7126 6.17873 12.4431C6.39436 12.1735 6.78767 12.1298 7.05721 12.3455L9.99589 14.6964C10.4268 15.0411 11.0517 14.99 11.4209 14.5798L17.8689 7.4154C18.0998 7.15883 18.495 7.13803 18.7515 7.36894Z" fill="white"/>
-                        </svg>
+                    <div className='flex gap-1 items-center' onClick={()=>setConfirm1(prev => !prev)}>
+                        {
+                            confirm1 ? 
+                            <svg className='cursor-pointer' width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" width="24" height="24" rx="4" fill="#3B7ACC"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7515 7.36894C19.0081 7.59985 19.0289 7.99504 18.798 8.2516L12.35 15.416C11.5379 16.3184 10.163 16.4309 9.21502 15.6725L6.27634 13.3215C6.0068 13.1059 5.9631 12.7126 6.17873 12.4431C6.39436 12.1735 6.78767 12.1298 7.05721 12.3455L9.99589 14.6964C10.4268 15.0411 11.0517 14.99 11.4209 14.5798L17.8689 7.4154C18.0998 7.15883 18.495 7.13803 18.7515 7.36894Z" fill="white"/>
+                            </svg> :
+                            <svg className='cursor-pointer' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="25" height="25" rx="4.5" fill="white" stroke="#545454" stroke-linecap="round"/>
+                            </svg>
+                        }
                         <span>I would like to confirm that the above information is correct.</span>
                     </div>
 
-                    <div className='flex gap-1 items-center'>
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div className='flex gap-1 items-center' onClick={()=>setConfirm2(prev => !prev)}>
+                        {
+                            confirm2 ? 
+                            <svg className='cursor-pointer' width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" width="24" height="24" rx="4" fill="#3B7ACC"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7515 7.36894C19.0081 7.59985 19.0289 7.99504 18.798 8.2516L12.35 15.416C11.5379 16.3184 10.163 16.4309 9.21502 15.6725L6.27634 13.3215C6.0068 13.1059 5.9631 12.7126 6.17873 12.4431C6.39436 12.1735 6.78767 12.1298 7.05721 12.3455L9.99589 14.6964C10.4268 15.0411 11.0517 14.99 11.4209 14.5798L17.8689 7.4154C18.0998 7.15883 18.495 7.13803 18.7515 7.36894Z" fill="white"/>
-                        </svg>
+                        </svg> : <svg className='cursor-pointer' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="25" height="25" rx="4.5" fill="white" stroke="#545454" stroke-linecap="round"/>
+                            </svg>
+                        }
                         <span>I have read and agree to the Terms and Conditions as well as the company's Policies  .</span>
                     </div>
                 </div>
