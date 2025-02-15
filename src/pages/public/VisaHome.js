@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import suitcaseImage from '../../assets/suitcase.png'
 import { GoArrowUpRight } from 'react-icons/go'
 import { TfiAngleDoubleDown } from "react-icons/tfi";
@@ -11,24 +11,60 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { BsFillStarFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import path from 'utils/path';
+import { SelectCountry, SelectTravel } from 'components';
 
 const VisaHome = () => {
+    const [showSelectCountry, setShowSelectCountry] = useState(false)
+
+    const [showSelectTravel, setShowSelectTravel] = useState(false)
+
+    const showSelectRef = useRef(null)
+    const showSelectTravelRef = useRef(null)
+
     const navigate = useNavigate()
+
+    const handleClickOutside = (event) => {
+        if (showSelectRef.current && !showSelectRef.current.contains(event.target)) {
+            setShowSelectCountry(false); // Ẩn SelectCountry khi click ra ngoài
+        }
+    };
+
+    // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside); // Thêm sự kiện click toàn cục
+
+        // Cleanup khi component unmount
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
+
+    const handleClickOutsideTravel = (event) => {
+        if (showSelectTravelRef.current && !showSelectTravelRef.current.contains(event.target)) {
+            setShowSelectTravel(false); // Ẩn SelectCountry khi click ra ngoài
+        }
+    };
+
+    // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutsideTravel); // Thêm sự kiện click toàn cục
+
+        // Cleanup khi component unmount
+        return () => {
+            document.removeEventListener('click', handleClickOutsideTravel);
+        };
+    }, []);
+
+
+    const handleShowSelectCountry = () => {
+        setShowSelectCountry(true)
+    }
+
+    const handleShowSelectTravel = () => {
+        setShowSelectTravel(true)
+    }
   return (
     <div className='my-[24px] full relative w-full'>
-        {/* <div className='w-[1313px] h-[686p] relative'>
-            <div className='flex w-[759px] h-[240px] gap-[56px]'>
-                <div className='w-[80px] h-[20px] my-auto bg-[#F08921]'></div>
-                <div className='flex flex-col justify-between'>
-                    <span className='text-[56px] font-extrabold leading-[64px]'>FIND YOUR DESTINATION!</span>
-                    <span className='text-[32px] font-[400px] leading-[36px]'>Let us apply the paperworks or eVISA for your trip.</span>
-                </div>
-            </div>
-            <div className='w-[564px] h-[514px] top-[47px] left-[741px] absolute'>
-                <img src={suitcaseImage} className='w-[564px] h-[514px] transform scale-x-[-1] absolute z-40' />
-                <div className='w-[433px] h-[433px] bg-[#F08921] rounded-full absolute top-0 right-0 z-10'></div>
-            </div>
-        </div> */}
         <div className='h-[240px] flex items-center absolute left-0'>
             <div className='w-[80px] h-[20px] my-auto bg-[#F08921]'></div>
         </div>
@@ -40,13 +76,15 @@ const VisaHome = () => {
                 </div>
                 <div className='w-[645px] h-[180px] flex flex-col gap-[24px] mt-[20px]'>
                     <div className='flex gap-[24px]'>
-                        <div className='w-[300px] h-[88px] flex flex-col gap-2'>
+                        <div ref={showSelectRef} className='cursor-pointer w-[300px] flex flex-col gap-2 relative' onClick={handleShowSelectCountry}>
                             <span className='font-semibold text-[18px] leading-[24px]'>Your Nationality</span>
                             <div className='w-[300px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
+                            {showSelectCountry && <SelectCountry />}
                         </div>
-                        <div className='w-[300px] h-[88px] flex flex-col gap-2'>
+                        <div ref={showSelectTravelRef} className='cursor-pointer w-[300px] flex flex-col gap-2 relative' onClick={handleShowSelectTravel}>
                             <span className='font-semibold text-[18px] leading-[24px]'>Travelling to</span>
                             <div className='w-[300px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
+                            {showSelectTravel && <SelectTravel />}
                         </div>
                     </div>
                     <div 

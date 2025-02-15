@@ -11,7 +11,8 @@
     "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.4",
-    "react-tooltip": "^5.26.4"
+    "react-tooltip": "^5.26.4",
+    "tailwindcss-animated": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

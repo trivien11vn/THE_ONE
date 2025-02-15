@@ -1,12 +1,85 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import item1 from '../../assets/item1.svg'
 import item2 from '../../assets/item2.svg'
 import item3 from '../../assets/item3.svg'
 import { useNavigate } from 'react-router-dom'
 import path from 'utils/path'
+import { SelectCountry, SelectTravel } from 'components'
+import SelectPurpose from 'components/Select/SelectPurpose'
 
 const VisaApply = () => {
     const navigate = useNavigate()
+    const [showSelectCountry, setShowSelectCountry] = useState(false)
+
+    const [showSelectTravel, setShowSelectTravel] = useState(false)
+
+    const [showSelectPurpose, setShowSelectPurpose] = useState(false)
+
+    const showSelectRef = useRef(null)
+    const showSelectTravelRef = useRef(null)
+    const showSelectPurposeRef = useRef(null)
+
+    const handleClickOutside = (event) => {
+        if (showSelectRef.current && !showSelectRef.current.contains(event.target)) {
+            setShowSelectCountry(false); // Ẩn SelectCountry khi click ra ngoài
+        }
+    };
+
+    // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside); // Thêm sự kiện click toàn cục
+
+        // Cleanup khi component unmount
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
+
+    const handleClickOutsideTravel = (event) => {
+        if (showSelectTravelRef.current && !showSelectTravelRef.current.contains(event.target)) {
+            setShowSelectTravel(false); // Ẩn SelectCountry khi click ra ngoài
+        }
+    };
+
+    // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutsideTravel); // Thêm sự kiện click toàn cục
+
+        // Cleanup khi component unmount
+        return () => {
+            document.removeEventListener('click', handleClickOutsideTravel);
+        };
+    }, []);
+
+
+    const handleClickOutsidePurpose = (event) => {
+        if (showSelectPurposeRef.current && !showSelectPurposeRef.current.contains(event.target)) {
+            setShowSelectPurpose(false); // Ẩn SelectCountry khi click ra ngoài
+        }
+    };
+
+    // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutsidePurpose); // Thêm sự kiện click toàn cục
+
+        // Cleanup khi component unmount
+        return () => {
+            document.removeEventListener('click', handleClickOutsidePurpose);
+        };
+    }, []);
+
+
+    const handleShowSelectCountry = () => {
+        setShowSelectCountry(true)
+    }
+
+    const handleShowSelectTravel = () => {
+        setShowSelectTravel(true)
+    }
+
+    const handleShowSelectPurpose = () => {
+        setShowSelectPurpose(true)
+    }
   return (
     <div className='my-[24px] full relative w-full flex flex-col gap-[40px]'>
         <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
@@ -31,17 +104,20 @@ const VisaApply = () => {
                 <span className='font-normal text-[20px] text-[#272727] leading-[24px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
             </div>
             <div className='flex gap-[54px] items-end'>
-                <div className='w-[230px] flex flex-col gap-2'>
+                <div ref={showSelectRef}className='w-[230px] flex flex-col gap-2 cursor-pointer relative' onClick={handleShowSelectCountry}>
                     <span className='font-semibold text-[18px] leading-[24px]'>Your Nationality</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
+                    {showSelectCountry && <SelectCountry />}
                 </div>
-                <div className='w-[230px] flex flex-col gap-2'>
+                <div ref={showSelectTravelRef} className='w-[230px] flex flex-col gap-2 cursor-pointer relative' onClick={handleShowSelectTravel}>
                     <span className='font-semibold text-[18px] leading-[24px]'>Travelling to</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
+                    {showSelectTravel && <SelectTravel />}
                 </div>
-                <div className='w-[230px] flex flex-col gap-2'>
+                <div ref={showSelectPurposeRef} className='w-[230px] flex flex-col gap-2 cursor-pointer relative' onClick={handleShowSelectPurpose}>
                     <span className='font-semibold text-[18px] leading-[24px]'>Purpose</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
+                    {showSelectPurpose && <SelectPurpose />}
                 </div>
                 <div onClick={()=>{navigate(`/${path.FILL_INFO_WEB}`)}} className='cursor-pointer w-full h-[56px] bg-[#F08921] text-white rounded-lg flex items-center justify-center'>
                     <span className='font-bold text-[16px] leading-[24px]'>APPLY NOW </span>

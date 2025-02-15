@@ -8,3 +8,6 @@ export {default as Button_White} from './Button/Button_White'
 export {default as Button_Blue} from './Button/Button_Blue'
 
 export {default as PictureImage} from './Picture/PictureImage'
+
+export {default as SelectCountry} from './Select/SelectCountry'
+export {default as SelectTravel} from './Select/SelectTravel'
