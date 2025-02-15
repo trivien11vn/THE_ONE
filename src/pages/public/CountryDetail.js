@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import building from '../../assets/building.jpg'
 import { RiArrowLeftWideFill, RiArrowRightWideFill } from 'react-icons/ri'
 import japanImage from '../../assets/japan_4.jpg'
-import { RecentBlog } from '../../components'
+import { RecentBlog, SelectCountry, SelectTravel } from '../../components'
 import image1 from '../../assets/japan_1.jpg'
 import image2 from '../../assets/japan_2.jpg'
 import image3 from '../../assets/japan_3.jpg'
@@ -10,6 +10,7 @@ import flag from '../../assets/japan_flag.png'
 import clsx from 'clsx'
 import { useNavigate } from 'react-router-dom'
 import path from 'utils/path'
+import SelectPurpose from 'components/Select/SelectPurpose'
 
 const CountryDetail = () => {
     const navigate = useNavigate()
@@ -28,6 +29,78 @@ const CountryDetail = () => {
         } else {
             setImageIndex(imageIndex - 1)
         }
+    }
+
+    const [showSelectCountry, setShowSelectCountry] = useState(false)
+
+    const [showSelectTravel, setShowSelectTravel] = useState(false)
+
+    const [showSelectPurpose, setShowSelectPurpose] = useState(false)
+
+    const showSelectRef = useRef(null)
+    const showSelectTravelRef = useRef(null)
+    const showSelectPurposeRef = useRef(null)
+
+    const handleClickOutside = (event) => {
+        if (showSelectRef.current && !showSelectRef.current.contains(event.target)) {
+            setShowSelectCountry(false); // Ẩn SelectCountry khi click ra ngoài
+        }
+    };
+
+    // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside); // Thêm sự kiện click toàn cục
+
+        // Cleanup khi component unmount
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
+
+    const handleClickOutsideTravel = (event) => {
+        if (showSelectTravelRef.current && !showSelectTravelRef.current.contains(event.target)) {
+            setShowSelectTravel(false); // Ẩn SelectCountry khi click ra ngoài
+        }
+    };
+
+    // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutsideTravel); // Thêm sự kiện click toàn cục
+
+        // Cleanup khi component unmount
+        return () => {
+            document.removeEventListener('click', handleClickOutsideTravel);
+        };
+    }, []);
+
+
+    const handleClickOutsidePurpose = (event) => {
+        if (showSelectPurposeRef.current && !showSelectPurposeRef.current.contains(event.target)) {
+            setShowSelectPurpose(false); // Ẩn SelectCountry khi click ra ngoài
+        }
+    };
+
+    // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutsidePurpose); // Thêm sự kiện click toàn cục
+
+        // Cleanup khi component unmount
+        return () => {
+            document.removeEventListener('click', handleClickOutsidePurpose);
+        };
+    }, []);
+
+
+    const handleShowSelectCountry = () => {
+        setShowSelectCountry(true)
+    }
+
+    const handleShowSelectTravel = () => {
+        setShowSelectTravel(true)
+    }
+
+    const handleShowSelectPurpose = () => {
+        setShowSelectPurpose(true)
     }
     return (
         <div className='my-[24px]  full relative w-full flex flex-col gap-[40px]'>
@@ -98,20 +171,24 @@ const CountryDetail = () => {
             </div>
 
             <div className='w-main mx-auto flex gap-[54px] items-end'>
-                <div className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div ref={showSelectRef} className='w-[230px] h-[88px] flex flex-col gap-2'>
                     <span className='font-semibold text-[18px] leading-[24px]'>Your Nationality</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
+                    {showSelectCountry && <SelectCountry />}
                 </div>
-                <div className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div ref={showSelectTravelRef} className='w-[230px] h-[88px] flex flex-col gap-2'>
                     <span className='font-semibold text-[18px] leading-[24px]'>Travelling to</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
+                    {showSelectTravel && <SelectTravel />}
                 </div>
-                <div className='w-[230px] h-[88px] flex flex-col gap-2'>
+                <div ref={showSelectPurposeRef} className='w-[230px] h-[88px] flex flex-col gap-2'>
                     <span className='font-semibold text-[18px] leading-[24px]'>Purpose</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
+                    {showSelectPurpose && <SelectPurpose />}
                 </div>
                 <div className='w-full h-[56px] bg-[#F08921] text-white rounded-lg flex items-center justify-center'>
                     <span className='font-bold text-[16px] leading-[24px]'>APPLY NOW </span>
+                    {showSelectPurpose && <SelectPurpose />}
                 </div>
             </div>
 

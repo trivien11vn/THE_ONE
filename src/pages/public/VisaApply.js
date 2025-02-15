@@ -104,7 +104,7 @@ const VisaApply = () => {
                 <span className='font-normal text-[20px] text-[#272727] leading-[24px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
             </div>
             <div className='flex gap-[54px] items-end'>
-                <div ref={showSelectRef}className='w-[230px] flex flex-col gap-2 cursor-pointer relative' onClick={handleShowSelectCountry}>
+                <div ref={showSelectRef} className='w-[230px] flex flex-col gap-2 cursor-pointer relative' onClick={handleShowSelectCountry}>
                     <span className='font-semibold text-[18px] leading-[24px]'>Your Nationality</span>
                     <div className='w-[230px] h-[48px] border rounded-md p-2 border-[#7F7F7F] font-[400px]'>Please select</div>
                     {showSelectCountry && <SelectCountry />}
